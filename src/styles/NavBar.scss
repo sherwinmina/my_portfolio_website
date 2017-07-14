@@ -1,4 +1,20 @@
-body {
-  color: red;
-  height: 300px;
+@import url('https://fonts.googleapis.com/css?family=Megrim|Zilla+Slab');
+
+
+.Navbar {
+ font-family: 'Megrim', cursive;
+  display: flex;
+  flex-direction: column;
+  max-width: 120px;
+  flex: 1;
+  color: white;
+  background: #21262b;
+  min-height: 500px;
+  a{
+    color: beige;
+  }
+  a:hover{
+   background: beige;
+   color: #212;
+  }
 }
