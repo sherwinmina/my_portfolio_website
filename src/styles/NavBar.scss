@@ -5,16 +5,69 @@
  font-family: 'Megrim', cursive;
   display: flex;
   flex-direction: column;
-  max-width: 120px;
+  max-width: 150px;
   flex: 1;
   color: white;
   background: #21262b;
   min-height: 500px;
+  align-items: 'center';
+  align-content: 'center';
+  
+  
+  .icon{
+    align-content: 'center';
+    align-items: 'center';
+  
+  }
+
+
   a{
     color: beige;
+    text-decoration:  none;
   }
   a:hover{
    background: beige;
    color: #212;
+   font-size: 30px;
+
+  
   }
 }
+
+i{
+  font-size: 14px;
+   display:  none;
+ 
+}
+
+.Navbar:hover {
+  color: beige;
+  i {
+    display: inline;
+    padding-right: 10px;
+  }
+  .icon{
+    padding-left: 7px;
+    color: white;
+   
+  }
+   
+}
+
+.link{
+  display: flex;
+  align-items: 'center';
+  align-content: 'center';
+  padding-left: 20px;
+  padding-top: 20px;
+  align-content: 'center';
+  justify-content: 'center';
+  align-items: 'center;'
+}
+
+.icon{
+   color: white;
+   
+  }
+
+
