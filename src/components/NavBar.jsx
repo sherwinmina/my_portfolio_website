@@ -1,5 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
+import { Link } from 'react-router';
+import '../styles/NavBar.scss'
 
 export default class Header extends Component {
   render() {
@@ -19,7 +21,7 @@ export default class Header extends Component {
                   <a className="nav-link" href="#">About</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Portfolio</a>
+                  <Link className="nav-link" to="Portfolio">Portfolio</Link>
                 </li>
               </ul>
             </div>
