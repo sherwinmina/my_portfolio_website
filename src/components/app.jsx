@@ -17,7 +17,10 @@ export default class App extends Component {
           <div>
              <div className="MainContainer">
               <NavBar/>
+              <div className="right-container">
               {this.props.children}
+              </div>
+              
             </div>
             <Footer/>
           </div>

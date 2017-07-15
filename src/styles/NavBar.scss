@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Megrim|Zilla+Slab');
+@import url('https://fonts.googleapis.com/css?family=Megrim|Pacifico');
 
 
 .Navbar {
- font-family: 'Megrim', cursive;
+  font-family: 'Pacifico', cursive;
   display: flex;
   flex-direction: column;
   max-width: 150px;
@@ -12,7 +12,9 @@
   min-height: 500px;
   align-items: 'center';
   align-content: 'center';
-  
+  border-bottom-right-radius: 30px;
+  border-right: 4px solid orange;
+ 
   
   .icon{
     align-content: 'center';
@@ -27,12 +29,21 @@
   }
   a:hover{
    background: beige;
-   color: #212;
-   font-size: 30px;
-
-  
+   color: #191500;
+   border-bottom-right-radius: 20px;
+   border-top-left-radius: 20px;
+   i{
+     font-size: 17px;
+   }
   }
 }
+
+ .logo{
+   font-family: 'Megrim', cursive;
+   padding: 10px;
+   font-size: 35px;
+   background: grey;
+ }
 
 i{
   font-size: 14px;
@@ -42,6 +53,7 @@ i{
 
 .Navbar:hover {
   color: beige;
+  
   i {
     display: inline;
     padding-right: 10px;

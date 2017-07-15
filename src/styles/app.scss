@@ -5,10 +5,22 @@ html, body{
   padding: 0;
 }
 
+// ::-webkit-scrollbar
+// {
+//   width: 12px;  /* for vertical scrollbars */
+//   height: 12px; /* for horizontal scrollbars */
+// }
+
 .MainContainer{
+  position: absolute; 
   display: flex;
-  background: beige;
-  height: 100%;
-  
-    
+  background: beige; 
+  height: 100%; 
+  width: 100%;  
+}
+
+.right-container{
+ 
+  overflow: scroll;
+ 
 }
