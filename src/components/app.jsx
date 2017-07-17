@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 
 
-
+// import 'semantic-ui-css/semantic.min.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import '../styles/app.scss';
 

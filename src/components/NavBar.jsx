@@ -1,60 +1,51 @@
 import React from 'react';
 import { Component } from 'react';
 import { Link } from 'react-router';
+import PropTypes from 'prop-types';
 import '../styles/NavBar.scss'
 
 
 // import Radium, { Style } from 'radium';
-import SvgIcon from 'material-ui/SvgIcon';
+import { Button, Icon, Divider } from 'semantic-ui-react';
 
-
-import ActionWork from 'material-ui/svg-icons/action/work';
-import ActionFace from 'material-ui/svg-icons/action/face';
-import ActionEmail from 'material-ui/svg-icons/communication/Email';
-import IconButton from 'material-ui/IconButton';
-import {red500, yellow500, blue500, greenA200} from 'material-ui/styles/colors';
-import { Icon } from 'semantic-ui-react';
-
-
-const iconStyles = {
-  marginRight: 24,
-  color: 'orange'
-};
-
-const linkStyle = {
- color: 'red'
-}
 
 export default class Header extends Component {
   render() {
      return (
        <div>
           <div className="Navbar">
-          
           <h3 className="logo">SM</h3>
-          <Link className='link' to="Home" style={linkStyle}> 
-               <HomeIcon className="icon" style={iconStyles}  hoverColor={greenA200} />
+          <Link className='link' to="Home"> 
+               <Icon inverted className="icon" name="browser" size='large' />
               <i>Home</i>
             </Link>
 
             <Link className='link' to="Portfolio"> 
-              <ActionWork className="icon" style={iconStyles} hoverColor={greenA200} />
+              <Icon inverted className="icon" name="travel" size='large' />
               <i>Portfolio</i>
             </Link>
 
             <Link className='link' to="About"> 
-              <ActionFace className="icon" style={iconStyles}  hoverColor={greenA200}/>
+              <Icon inverted className="icon" name="smile" size='large' />
               <i>About</i>
             </Link>
 
             <Link className='link' to="Contact">
-              <ActionEmail className="icon" style={iconStyles} hoverColor={greenA200}/>  
+             <Icon inverted className="icon" name="mail" size='large' />
                 <i>Contact</i>  
             </Link>
 
-             <IconButton iconClassName="muidocs-icon-custom-github" />
-          <Icon name='github' size='small' />
-          <a href="">Linkedin</a>
+          
+
+          <div className="social">
+            <Divider className='divider'/>
+            <Icon className="iconLink" name='github' size='large'>
+              <i>Github</i>
+            </Icon>
+            <Icon className="iconLink" name='linkedin square' size='large' />
+            <Icon className="iconLink" name='facebook square'  size='large' />
+            <Icon className="iconLink" name='codepen'  size='large' />
+          </div>
           </div>
           
        

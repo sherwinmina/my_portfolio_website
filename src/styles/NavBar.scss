@@ -7,7 +7,7 @@
   flex-direction: column;
   max-width: 150px;
   flex: 1;
-  color: white;
+  // color: white;
   background: #21262b;
   min-height: 500px;
   align-items: 'center';
@@ -15,38 +15,38 @@
   border-bottom-right-radius: 30px;
   border-right: 4px solid orange;
  
-  
-  .icon{
-    align-content: 'center';
-    align-items: 'center';
-  
+  .icon:hover{
+    color: orange;
+    padding-left: 20px;
   }
-
 
   a{
     color: beige;
     text-decoration:  none;
   }
+
   a:hover{
    background: beige;
    color: #191500;
    border-bottom-right-radius: 20px;
    border-top-left-radius: 20px;
    i{
-     font-size: 17px;
+     font-size: 15px;
    }
+
+   
   }
 }
 
- .logo{
+.logo{
    font-family: 'Megrim', cursive;
    padding: 10px;
    font-size: 35px;
    background: grey;
- }
+}
 
 i{
-  font-size: 14px;
+  font-size: 11px;
    display:  none;
  
 }
@@ -58,10 +58,13 @@ i{
     display: inline;
     padding-right: 10px;
   }
+
   .icon{
     padding-left: 7px;
-    color: white;
-   
+  }
+
+  .iconLink{
+    padding-left: 35px;
   }
    
 }
@@ -77,9 +80,29 @@ i{
   align-items: 'center;'
 }
 
-.icon{
-   color: white;
-   
+
+.social {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  
+  .divider{
+    margin-bottom: -12px;
   }
+
+  .iconLink{
+    align-content: 'center';
+    align-items: 'center';
+    padding: 18px;
+    color: cyan;
+  }
+
+.iconLink:hover{
+  color: orange;
+  padding-left: 40px;
+}
+
+  
+}
 
 

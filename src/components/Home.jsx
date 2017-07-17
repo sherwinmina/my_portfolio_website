@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Divider} from 'semantic-ui-react';
 
 import '../styles/Home.scss'
 
@@ -8,6 +9,8 @@ class Home extends Component {
       <div className="home">
         <h1>Welcome</h1>
         <p>Aloha</p>
+        <Divider></Divider>
+       
          <p>  Hello Internet my name is Sherwin Mina I am a developer. Aliquam unde tempora laborum aspernatur praesentium? Odio, sequi maxime, tenetur, natus magnam assumenda labore repellat sunt dolorem vero nesciunt eos illo molestiae. </p> 
       </div>
     )
