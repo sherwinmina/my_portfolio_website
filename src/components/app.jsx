@@ -12,7 +12,7 @@ import '../styles/app.scss';
 export default class App extends Component {
   render() {
      return (
-        <div>
+    
           <MuiThemeProvider>
           <div>
              <div className="MainContainer">
@@ -20,12 +20,10 @@ export default class App extends Component {
               <div className="right-container">
               {this.props.children}
               </div>
-              
             </div>
-            <Footer/>
           </div>
           </MuiThemeProvider>
-      </div>
+   
     );
   }
 }

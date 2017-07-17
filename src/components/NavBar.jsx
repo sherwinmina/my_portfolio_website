@@ -11,7 +11,10 @@ import SvgIcon from 'material-ui/SvgIcon';
 import ActionWork from 'material-ui/svg-icons/action/work';
 import ActionFace from 'material-ui/svg-icons/action/face';
 import ActionEmail from 'material-ui/svg-icons/communication/Email';
+import IconButton from 'material-ui/IconButton';
 import {red500, yellow500, blue500, greenA200} from 'material-ui/styles/colors';
+import { Icon } from 'semantic-ui-react';
+
 
 const iconStyles = {
   marginRight: 24,
@@ -27,6 +30,7 @@ export default class Header extends Component {
      return (
        <div>
           <div className="Navbar">
+          
           <h3 className="logo">SM</h3>
           <Link className='link' to="Home" style={linkStyle}> 
                <HomeIcon className="icon" style={iconStyles}  hoverColor={greenA200} />
@@ -47,6 +51,10 @@ export default class Header extends Component {
               <ActionEmail className="icon" style={iconStyles} hoverColor={greenA200}/>  
                 <i>Contact</i>  
             </Link>
+
+             <IconButton iconClassName="muidocs-icon-custom-github" />
+          <Icon name='github' size='small' />
+          <a href="">Linkedin</a>
           </div>
           
        

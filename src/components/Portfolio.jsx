@@ -4,11 +4,15 @@ import { Component } from 'react';
 import Paper from 'material-ui/Paper';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import Divider from 'material-ui/Divider';
+
+import "../styles/Portfolio.scss"
 
 const style = {
-  height:100,
-  width: 300,
+  height:300,
+  width: 400,
   margin: 20,
+  background: '#7b6737',
   textAlign: 'center',
   display: 'inline-block',
 };
@@ -18,7 +22,8 @@ export default class Portfolio extends Component {
   render() {
      return (
        <div>
-         <h1>Porfolio</h1>
+         <h2>Porfolio</h2>
+         <Divider style={{background:'orange'}}/>
          <Paper style={style} zDepth={1} >
             <Card>
     <CardHeader
@@ -61,4 +66,8 @@ export default class Portfolio extends Component {
        
     );
   }
+}
+
+const Layout =  {
+
 }
