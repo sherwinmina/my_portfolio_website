@@ -61,9 +61,7 @@ export default class Portfolio extends Component {
         </Grid>
         </Container>
         </Container>
-
-          <Card fluid color='orange' header='Option 2' />
-          <Card fluid color='yellow' header='Option 3' />
+        
         </Card.Group>
        
       

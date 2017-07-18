@@ -25,11 +25,8 @@ h2{
   padding-top: 30px;
 }
 
-.left{
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-   
-  background: #c0b283;
+.left{ 
+  border: #c0b283 solid 1px;
 }
 .right{
   display: flex;
