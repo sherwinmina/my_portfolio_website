@@ -1,8 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 
+.header{
+  padding-top: 30px;
+  border: grey solid 1px;
+}
+
 h2{
- font-family: 'Shadows Into Light', cursive, Arial, Helvetica, sans-serif;
+  font-family: 'Shadows Into Light', cursive, Arial, Helvetica, sans-serif;
+  font-size: 35px;
   text-align: center;
-  color:#21262b;
-  background: #d0be95;
+  color:#373737;
+  
+}
+
+.portfolio{
+  // padding-top: 24px;
+}
+
+.container{
+  // padding-top: 24px;
+}
+
+.box{
+  padding-top: 30px;
+}
+
+.left{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+   
+  background: #c0b283;
+}
+.right{
+  display: flex;
+  padding: 20px;
+  padding-left: 20px;
+  background: #373737;
+  color: white;
+
+}
+
+.content{
+  padding: 20px;
 }

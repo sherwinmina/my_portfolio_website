@@ -17,15 +17,15 @@
  
   .icon:hover{
     color: orange;
-    padding-left: 20px;
+    padding-left: 10px;
   }
 
-  a{
+  .link{
     color: beige;
     text-decoration:  none;
   }
 
-  a:hover{
+  .link:hover{
    background: beige;
    color: #191500;
    border-bottom-right-radius: 20px;
@@ -33,7 +33,10 @@
    i{
      font-size: 15px;
    }
-
+   .icon {
+     color: orange;
+     font-size: 25px;
+   }
    
   }
 }
@@ -45,7 +48,7 @@
    background: grey;
 }
 
-i{
+.label{
   font-size: 11px;
    display:  none;
  
@@ -54,8 +57,9 @@ i{
 .Navbar:hover {
   color: beige;
   
-  i {
+  .label {
     display: inline;
+    padding-left: 15px;
     padding-right: 10px;
   }
 
@@ -87,7 +91,7 @@ i{
   padding-top: 50px;
   
   .divider{
-    margin-bottom: -12px;
+    margin-bottom: -10px;
   }
 
   .iconLink{
@@ -97,9 +101,22 @@ i{
     color: cyan;
   }
 
+  .tag {
+    font-size: 14px;
+    padding-left: 14px;
+    padding-right: 20px;
+    font-family: 'Pacifico';
+    display: none;
+  }
+
 .iconLink:hover{
   color: orange;
-  padding-left: 40px;
+  padding-left: 20px;
+  size: 'huge';
+  .tag {
+    display: inline;
+  }
+  
 }
 
   

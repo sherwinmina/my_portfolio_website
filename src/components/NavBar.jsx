@@ -10,41 +10,71 @@ import { Button, Icon, Divider } from 'semantic-ui-react';
 
 
 export default class Header extends Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      activeItem : 'home'
+    }
+    
+    this.handleItemClick = this.handleItemClick.bind(this);
+
+  }
+
+   handleItemClick(e, { name }){
+     e.preventDefault();
+     this.setState({ activeItem: name })
+   } 
+
+
   render() {
+     const { activeItem } = this.state
+     console.log(activeItem)
      return (
        <div>
           <div className="Navbar">
           <h3 className="logo">SM</h3>
-          <Link className='link' to="Home"> 
-               <Icon inverted className="icon" name="browser" size='large' />
-              <i>Home</i>
+        
+          <Link className='link' to="Home" > 
+               <Icon inverted className="icon" name="browser" size='large' onClick={() =>( this.setState({ activeItem: 'home' }))} />
+              <div className='label' name='home'>Home</div>
             </Link>
 
-            <Link className='link' to="Portfolio"> 
+            <Link className='link' to="Portfolio" onClick={() =>( this.setState({ activeItem: 'portfolio' }))}> 
               <Icon inverted className="icon" name="travel" size='large' />
-              <i>Portfolio</i>
+              <div className='label' name='portfolio'>Portfolio</div>
             </Link>
 
-            <Link className='link' to="About"> 
+            <Link className='link' to="About" onClick={() =>( this.setState({ activeItem: 'about' }))}> 
               <Icon inverted className="icon" name="smile" size='large' />
-              <i>About</i>
+              <div className='label' name='about' >About</div>
             </Link>
 
-            <Link className='link' to="Contact">
+            <Link className='link' to="Contact" onClick={() =>( this.setState({ activeItem: 'contact' }))}>
              <Icon inverted className="icon" name="mail" size='large' />
-                <i>Contact</i>  
+                <div className='label' name='contact'>Contact</div>  
             </Link>
 
           
 
           <div className="social">
             <Divider className='divider'/>
-            <Icon className="iconLink" name='github' size='large'>
-              <i>Github</i>
+            <a  href='https://github.com/sherwinmina'  target="_blank">
+              <Icon className="iconLink" name='github' size='large'>
+              <div className='tag' >Github</div> 
             </Icon>
-            <Icon className="iconLink" name='linkedin square' size='large' />
-            <Icon className="iconLink" name='facebook square'  size='large' />
-            <Icon className="iconLink" name='codepen'  size='large' />
+            </a>
+            
+
+            <Icon className="iconLink" name='linkedin square' size='large'>
+              <div className='tag'>Linkedin</div>
+            </Icon>
+            <Icon className="iconLink" name='facebook square'  size='large'>
+              <div className='tag'>Facebook</div>
+            </Icon>
+            <Icon className="iconLink" name='codepen'  size='large'>
+              <div className='tag'>CodePen</div>
+            </Icon>
           </div>
           </div>
           

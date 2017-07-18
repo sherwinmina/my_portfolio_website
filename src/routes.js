@@ -9,11 +9,14 @@ import Home from './components/Home';
 
 
 export default (
-  <Route path="/" component={App}>
-    <IndexRoute component={About} />
-    <Route path="Home" component={Home} />
-    <Route path="Portfolio" component={Portfolio} />
-    <Route path="About" component={About} />
-    <Route path="Contact" component={Contact} />
-  </Route>
+  <div>
+  <Route path="Home" component={Home} />
+    <Route path="/" component={App}>
+      <IndexRoute component={About} />
+      <Route path="Portfolio" component={Portfolio} />
+      <Route path="About" component={About} />
+      <Route path="Contact" component={Contact} />
+    </Route>
+  </div>
+  
 )
