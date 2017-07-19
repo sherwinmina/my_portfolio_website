@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Megrim|Pacifico');
 
 
 .Navbar {
@@ -109,16 +108,14 @@
     display: none;
   }
 
-.iconLink:hover{
-  color: orange;
-  padding-left: 20px;
-  size: 'huge';
-  .tag {
-    display: inline;
+  .iconLink:hover{
+    color: orange;
+    padding-left: 20px;
+    size: 'huge';
+    .tag {
+      display: inline;
+    }
   }
-  
-}
-
   
 }
 

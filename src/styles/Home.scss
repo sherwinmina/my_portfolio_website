@@ -1,21 +1,134 @@
-@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Megrim|Pacifico|Comfortaa:300|Bungee+Hairline|Bungee+Inline|Cabin+Sketch|Codystar|Comfortaa:300|Fascinate|Finger+Paint|Fredericka+the+Great|Frijole|Geostar+Fill|Kranky|Londrina+Sketch|Monoton|Nixie+One|Shrikhand');
 
-.home{
-  margin: 0;
+
+body{
+  height: 100%;
+}
+
+#home{
+  height: 100%;
+   width:100%;
+  background: #252120;
+  outline: 1px solid grey;
+  padding:12px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.home1{
+  margin: 0px;
   width: 100%;
   height: 100vh;
-  font-family: 'Shadows Into Light',Arial, Helvetica, sans-serif;
-   background: #252120;
+  font-family: 'Comfortaa',Arial, Helvetica, sans-serif;
+  background: #252120;
   color: white;
-  align-items: center;
-  align-content: center;
-   justify-content: center;
+  margin:0;
+  padding:0;
+  
+  // align-items: center;
+  // align-content: center;
+  // justify-content: center;
   flex-direction: column;
   display: flex;
-  border: white solid 3px;
+  border-top:1px solid grey;
+  border-right:1px solid grey;
+
+  right:10%;
+  
+  // outline: 1px solid grey;
+  // outline-offset: -20px;
 }
 
-.container {
-     vertical-align: middle;
-     text-align: center;
+#logo {
+  font-family: 'Megrim', cursive;
+  text-decoration: underline;
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  color: white;
 }
+
+#border{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0px;
+ 
+  border-left: 1px solid grey;
+  position: absolute;
+  top: 10%;
+  right:2%;
+  left: 2%;
+  bottom:-2%;
+  border-bottom:1px solid grey;  
+}
+
+// .content1  {
+//   //  align-items: center;
+//   // align-content: center;
+//   // justify-content: center;
+// }
+
+.content2 {
+  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+ 
+  margin-top: -100px;
+}
+
+.photo{
+  border-radius: 50px;
+  height: 200px;
+  border: grey solid 1.5px;
+   
+}
+
+#greeting{
+  font-family: 'Monoton', cursive;
+  color: #af473c;
+  font-size: 40px;
+  letter-spacing: 2px;
+   font-weight: 100;
+}
+
+#tagline{
+ font-family: 'Pacifico', cursive;
+ font-size: 17px;
+ margin-top: -34px;
+ color:grey
+}
+
+#design{
+  font-family: 'Codystar', cursive;
+  font-size: 14px;
+  color: cyan;
+  margin-top: -40px;
+}
+
+#enter{
+  padding-top: 35px;
+  font-size: 18px;
+  color: white;
+}
+
+#enter:hover{
+  color: orange;
+  font-size: 24px;
+}
+
+// Megrim|Pacifico|Comfortaa:300|Bungee+Hairline|Bungee+Inline|
+// Cabin+Sketch|Codystar|Comfortaa:300|Fascinate|Finger+Paint|
+// Fredericka+the+Great|Frijole|Geostar+Fill|Kranky|Londrina+Sketch|
+// Monoton|Nixie+One|Shrikhand');

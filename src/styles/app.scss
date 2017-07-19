@@ -9,7 +9,7 @@ html, body{
 
 ::-webkit-scrollbar
 {
-  width: 20px;  /* for vertical scrollbars */
+  width: 10px;  /* for vertical scrollbars */
   height: 1px; /* for horizontal scrollbars */
 }
 
@@ -20,8 +20,8 @@ html, body{
 
 ::-webkit-scrollbar-thumb
 {
-  background: #191500;
-  border: 2px solid orange;
+  background: #1d2731;
+  border: 2px solid #984B43;
 }
 
 .MainContainer{

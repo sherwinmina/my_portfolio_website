@@ -1,23 +1,33 @@
 import React, { Component } from 'react'
-import {Button,Divider, Image} from 'semantic-ui-react';
+import {Grid, Container, Button, Divider, Segment, Image} from 'semantic-ui-react';
 import {Link} from 'react-router';
 
 import '../styles/Home.scss'
-
+// https://drive.google.com/uc?id=0By7dMnbpFyGxVjdpUE1JWEJqVmc
 class Home extends Component {
   render () {
     return (
-      <div className="home">
-        <div className="container">
-        
-        <img src='../images/Face.jpg' />
-          <h1> >_ Hello, Internet</h1>
-          Sherwin Mina
-          <Divider></Divider>
-          
-          <p>  Hello Internet my name is Sherwin Mina I am a developer. Thank you for visiting my portfolio site. </p>
-          <Link to="Portfolio"><Button basic inverted> Enter </Button> </Link> 
+      <div id="home">
+      <div className="home1">
+      <h2 id='logo'>SM</h2>
+        <div id="border">
+          <div className="content1">
+            <Container>
+           
+              <div className="content2">
+                  <Image className='photo' src='https://drive.google.com/uc?id=0By7dMnbpFyGxVjdpUE1JWEJqVmc' />
+                  <Divider/>
+                  <p id='greeting'> >_ Hello, Internet...</p>
+                  <p id='tagline'>Let's Build Something together</p>
+                  <Divider/>
+                  <p id='design' > DESIGN | DEVELOP | BUILD </p>
+                 
+                  <Link id='enter' to="Portfolio"> ENTER </Link> 
+              </div>
+            </Container>
+          </div>
         </div>
+      </div>
       </div>
     )
   }
