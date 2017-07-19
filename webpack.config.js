@@ -1,13 +1,15 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-  entry: [
-    './src/index.jsx'
-  ],
+  entry: {
+    main: './src/index.jsx',
+    vendor: ['react', 'react-dom', 'react-router', 'lodash', 'semantic-ui-react', 'prop-types']
+  },
   output: {
-    path: __dirname,
+    path: path.join(__dirname, 'build'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].bundle.js'
   },
   module: {
     loaders: [
@@ -34,6 +36,13 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.bundle.js',
+      chunks: ['vendor']
+    })
+  ],
   devServer: {
     historyApiFallback: true,
     contentBase: './',

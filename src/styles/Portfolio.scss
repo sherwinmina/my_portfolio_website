@@ -2,7 +2,12 @@
 
 .header{
   padding-top: 30px;
-  border: grey solid 1px;
+  h1{
+    font-size: 35px;
+    font-family: 'Megrim', cursive;
+    text-align: center; 
+  }
+  
 }
 
 h2{
@@ -15,6 +20,7 @@ h2{
 
 .portfolio{
   padding-top: 24px;
+  width: 100%;
 }
 
 .container{
@@ -26,14 +32,28 @@ h2{
 }
 
 .left{ 
-  border: #c0b283 solid 1px;
+  border: #d9d9d9 solid 1px;
+  background: white;
 }
 .right{
   display: flex;
   padding: 20px;
   padding-left: 20px;
-  background: #373737;
-  color: white;
+  background: #a5a5af;
+  color: #1d2731;
+
+}
+
+#title{
+  padding:0;
+  height:100%;
+  width:100%;
+
+ h1{
+   text-align: center;
+    font-family: 'Megrim';
+   color: #1d2731;
+ }
 
 }
 
