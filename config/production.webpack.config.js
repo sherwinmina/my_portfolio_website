@@ -21,7 +21,7 @@ module.exports = function(env) {
       {
       exclude: /node_modules/,
       loader: 'babel-loader',
-      query: {
+      options: {
       presets: ['react', 'es2015', 'stage-1']
       },
      },
@@ -63,13 +63,14 @@ module.exports = function(env) {
     }),
     new optimizeCssAssetsWebpackPlugin({
       cssProcessorOptions: {discardComments: {removeAll: true}}
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      output: {
-        comment: false
-      },
-      mangle: false
     })
+    // ,
+    // new webpack.optimize.UglifyJsPlugin({
+    //   output: {
+    //     comment: false
+    //   },
+    //   mangle: false
+    // })
   ],
   devServer: {
     historyApiFallback: true,

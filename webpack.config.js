@@ -1,11 +1,11 @@
-var path = require('path');
+// var path = require('path');
 
-module.exports = function(env) {
-  const webpackConfigPath =
-    path.resolve(__dirname, 'config', `${env}.webpack.config.js`);
-  const webpackConfig = require(webpackConfigPath)(env);
-  return webpackConfig;
-}
+// module.exports = function(env) {
+//   const webpackConfigPath =
+//     path.resolve(__dirname, 'config', `${env}.webpack.config.js`);
+//   const webpackConfig = require(webpackConfigPath)(env);
+//   return webpackConfig;
+// }
 
 // var path = require('path');
 // var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -14,78 +14,62 @@ module.exports = function(env) {
 // var cleanWebpackPlugin = require('clean-webpack-plugin');
 // var optimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 
-// module.exports =  {
+
+
+var path = require('path');
+var webpack = require('webpack');
+
+module.exports = {
+  entry: {
+    main: './src/index.js'
+    // vendor: ['react', 'react-dom', 'react-router', 'lodash', 'semantic-ui-react', 'prop-types']
+  },
+  output: {
+    path: path.join(__dirname, 'build'),
+    publicPath: '/',
+    filename: '[name].bundle.js'
+  },
+  module: {
+    rules: [
+      {
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+      options: {
+        presets: ['react', 'es2015', 'stage-1']
+      },
+     },
+     {
+      test: /\.css$/,
+      include: [path.join(__dirname, 'src')
+      ],
+      loader: 'style-loader!css-loader'
+    },
+    {
+      test: /\.scss$/,
+      loader: 'style-loader!css-loader!sass-loader',
+    },
+    {
+      test: /\.(png|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+      use: 'url-loader?limit=100000'
+    }
+    ],
+  },
   
-//     entry: {
-//     main: path.resolve(__dirname, '..', 'src', 'index' ),
-//     vendor: ['react', 'react-dom', 'react-router', 'lodash', 'semantic-ui-react', 'prop-types']
-//   },
-//   output: {
-//     path: path.join(__dirname, '..', 'build-prod'),
-//     publicPath: '/',
-//     filename: '[name].[chunkhash].bundle.js'
-//   },
-//   module: {
-//     rules: [
-//       {
-//       exclude: /node_modules/,
-//       loader: 'babel',
-//       query: {
-//       presets: ['react', 'es2015', 'stage-1']
-//       },
-//      },
-//      {
-//       test: /\.css$/,
-//       use: ['style-loader', 'css-loader']
-//     },
-//     {
-//       test: /\.scss$/,
-//       loader: ExtractTextPlugin.extract({
-//             fallback: "style-loader",
-//             use: "css-loader?sourceMap!sass-loader?sourceMap"
-//           })
-//     }
-//     ],
-//   },
-  
-//   resolve: {
-//     extensions: ['.js', '.jsx']
-//   },
-//   plugins: [
-//     new ExtractTextPlugin('[name].[chunkhash].css'),
-//     new webpack.optimize.CommonsChunkPlugin({
-//       name: 'vendor',
-//       filename: 'vendor.[chunkhash].bundle.js',
-//       chunks: ['vendor']
-//     }),
-//     new htmlWebpackPlugin({
-//       template: path.resolve(__dirname, '..', 'index.html'),
-//       hash: true,
-//       chunks: ['vendor',  'main'],
-//       minify: {
-//         collapseWhiteSpace: true
-//       }
-//     }),
-//     new cleanWebpackPlugin(['build-prod'], {
-//       root: path.resolve(__dirname),
-//       verbose: true
-//     }),
-//     new optimizeCssAssetsWebpackPlugin({
-//       cssProcessorOptions: {discardComments: {removeAll: true}}
-//     }),
-//     new webpack.optimize.UglifyJsPlugin({
-//       output: {
-//         comment: false
-//       },
-//       mangle: false
-//     })
-//   ],
-//   devServer: {
-//     historyApiFallback: true,
-//     contentBase: path.resolve(__dirname, '..', 'build-prod'),
-//     hot: true,
-//     inline: true
-//   },
-//   devtool: 'eval-source-map'
-  
-// };
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.bundle.js',
+      chunks: ['vendor']
+    }),
+  ],
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './',
+     hot: true
+  },
+  devtool: 'eval-source-map'
+};
+

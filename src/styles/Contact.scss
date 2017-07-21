@@ -1,0 +1,43 @@
+#container{
+  width: 100%;
+  height: 100%;
+}
+
+#left{
+
+  background: beige;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+#right{
+  background: white;
+  margin: 0;
+   height: 100vh;
+  color: grey
+}
+
+#headline{
+  font-size:40px;
+  font-family: 'Megrim', cursive;
+  margin: 40px;
+  text-align: center;
+
+}
+
+#profile{
+  display: flex;
+  align-content: center;
+
+}
+
+#about{
+display: flex;
+padding-top: 40px;
+
+  align-content: center;
+}
