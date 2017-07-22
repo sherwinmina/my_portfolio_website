@@ -98,6 +98,6 @@ module.exports = function(env) {
     hot: true,
     inline: true
   },
-  devtool: 'eval-source-map'
+  devtool: 'source-map'
   }
 };
