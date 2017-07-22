@@ -14,7 +14,7 @@ module.exports = function(env) {
   output: {
     path: path.join(__dirname, '..', 'build-prod'),
     publicPath: '/',
-    filename: '[name].[chunkhash].bundle.js'
+    filename: '[name].[hash].bundle.js'
   },
   module: {
     rules: [
@@ -26,6 +26,17 @@ module.exports = function(env) {
       },
      },
      {
+      test: /\.html$/,
+      use: [ {
+        loader: 'html-loader',
+        options: {
+          minimize: true,
+          removeComments: false,
+          collapseWhitespace: false
+        }
+      }],
+      },
+     {
       test: /\.css$/,
       use: ['style-loader', 'css-loader']
     },
@@ -35,6 +46,10 @@ module.exports = function(env) {
             fallback: "style-loader",
             use: "css-loader?sourceMap!sass-loader?sourceMap"
           })
+    },
+    {
+      test: /\.(png|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+      use: 'url-loader?limit=100000'
     }
     ],
   },
@@ -43,10 +58,10 @@ module.exports = function(env) {
     extensions: ['.js', '.jsx']
   },
   plugins: [
-    new ExtractTextPlugin('[name].[chunkhash].css'),
+    new ExtractTextPlugin('[name].[hash].css'),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: 'vendor.[chunkhash].bundle.js',
+      filename: 'vendor.[hash].bundle.js',
       chunks: ['vendor']
     }),
     new htmlWebpackPlugin({
@@ -61,16 +76,21 @@ module.exports = function(env) {
       root: path.resolve(__dirname),
       verbose: true
     }),
+     new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(env),
+        'env': JSON.stringify(env)
+    }),
     new optimizeCssAssetsWebpackPlugin({
       cssProcessorOptions: {discardComments: {removeAll: true}}
     })
-    // ,
-    // new webpack.optimize.UglifyJsPlugin({
-    //   output: {
-    //     comment: false
-    //   },
-    //   mangle: false
-    // })
+    ,
+    new webpack.optimize.UglifyJsPlugin({
+      output: {
+        comments: false
+      },
+      mangle: false
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
     historyApiFallback: true,

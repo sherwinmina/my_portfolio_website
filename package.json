@@ -11,7 +11,12 @@
     "webpack:build-development": "webpack --env=development",
     "webpack:serve-development": "webpack-dev-server --env=development",
     "webpack:build-production": "webpack --env=production",
-    "webpack:serve-production": "webpack-dev-server --env=production"
+    "webpack:serve-production": "webpack-dev-server --env=production",
+    "serve-local:production": "cd build-prod; http-server -p 8000 -o",
+    "serve-local:development": "cd build-dev; http-server -p 7000 -o",
+    "surge-deploy:production": "yarn run webpack:build-production; surge -p build-prod -d prod-webpack-course.surge.sh",
+    "surge-deploy:development": "yarn run webpack:build-development; surge -p build-dev -d dev-webpack-course.surge.sh",
+    "surge-deploy:all": "yarn run surge-deploy:production; yarn run surge-deploy:development"
   },
   "author": "Sherwin Mina",
   "license": "ISC",
@@ -25,6 +30,8 @@
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.29.0",
     "jquery": "^2.2.1",
     "jsdom": "^8.1.0",
