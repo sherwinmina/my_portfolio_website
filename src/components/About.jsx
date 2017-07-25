@@ -10,11 +10,11 @@ export default class About extends Component {
      return (
       <div  id='container'>
         <Grid reversed='mobile' stackable columns={2}>
-          <Grid.Column id="left">
+          <Grid.Column id="left" mobile={16} computer={8}>
              <Image  size='medium' shape='rounded' centered bordered  src='https://cdn.vox-cdn.com/thumbor/TXkOq7bnxQ7x6czLQBWknY9NiHE=/0x0:640x480/1400x1050/cdn.vox-cdn.com/uploads/chorus_image/image/49517779/20160315-san-francisco.0.jpg' />
   
           </Grid.Column>
-          <Grid.Column id="right">
+          <Grid.Column id="right" mobile={16} computer={8}>
             <div >
               <div id='headline'>Designer & Coder</div>
               <Divider/>
