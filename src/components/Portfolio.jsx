@@ -1,10 +1,11 @@
 import React from 'react';
 import { Component } from 'react';
-import WorkCArd from './common/WorkCard';
+import WorkCard from './common/WorkCard';
+import PortfolioNav from './Portfolio/PortfolioNav';
 
 import {Grid, Container, Button, Icon, Divider, Card, Image } from 'semantic-ui-react';
 
-import "../styles/Portfolio.scss"
+import "../styles/Portfolio.scss";
 
 
 
@@ -13,6 +14,7 @@ export default class Portfolio extends Component {
   render() {
      return (
        <div className='portfolio'> 
+        <PortfolioNav/>
         <div className="header"><h1>Portfolio</h1></div>
          <Divider/>
       
