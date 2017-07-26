@@ -1,24 +1,12 @@
-import React from 'react';
-import { Component } from 'react';
-import WorkCard from './common/WorkCard';
-import PortfolioNav from './Portfolio/PortfolioNav';
-
+import React, { Component } from 'react';
 import {Grid, Container, Button, Icon, Divider, Card, Image } from 'semantic-ui-react';
 
-import "../styles/Portfolio.scss";
 
-
-
-
-export default class Portfolio extends Component {
-  render() {
-     return (
-       <div className='portfolio'> 
-        <div className="header"><h1>Portfolio</h1></div>
-         <Divider/>
-          <PortfolioNav/>
-      
-        <Card.Group>
+class Frontend extends Component {
+  render () {
+    return (
+      <div>
+          <Card.Group>
         <Container id='box'>
         <Grid celled='internally' stackable  className='box' columns={7}>
           <Grid.Row  className='box'>
@@ -93,14 +81,9 @@ export default class Portfolio extends Component {
         </Container>
         
         </Card.Group>
-       
-      
-       </div>
-       
-    );
+      </div>
+    )
   }
 }
 
-const Layout =  {
-
-}
+export default Frontend
