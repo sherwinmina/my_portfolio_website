@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import {Grid, Container, Button, Icon, Divider, Card, Image } from 'semantic-ui-react';
 
-
 class Frontend extends Component {
   render () {
     return (
       <div>
-          <Card.Group>
+        <Card.Group>
         <Container id='box'>
         <Grid celled='internally' stackable  className='box' columns={7}>
           <Grid.Row  className='box'>
@@ -86,4 +85,4 @@ class Frontend extends Component {
   }
 }
 
-export default Frontend
+export default Frontend;

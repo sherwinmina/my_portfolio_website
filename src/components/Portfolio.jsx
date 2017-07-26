@@ -1,11 +1,11 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import WorkCard from './common/WorkCard';
 import PortfolioNav from './Portfolio/PortfolioNav';
 
 import {Grid, Container, Button, Icon, Divider, Card, Image } from 'semantic-ui-react';
 
 import "../styles/Portfolio.scss";
+
 
 
 
