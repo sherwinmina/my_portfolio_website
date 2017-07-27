@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Tabs, Tab} from 'react-materialize';
-import {Link} from 'react-router';
+// import {Link} from 'react-router';
 
 import Frontend from './Frontend';
 import All from './All';
@@ -24,7 +24,7 @@ class PortfolioNav extends Component {
             <All/>
           </Tab>
           <Tab title="Mobile" className='tab col s2'>Mobile</Tab>
-          <Tab title="Miscellaneous" className='tab col s2'>Miscellaneous</Tab>
+          <Tab title="Miscellaneous" className='tab col s2'>Mobile</Tab>
         </Tabs>
 
      

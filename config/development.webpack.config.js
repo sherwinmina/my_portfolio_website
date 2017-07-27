@@ -8,7 +8,7 @@ module.exports = function(env){
   return {
     entry: {
     main: path.resolve(__dirname, '..', 'src', 'index' ),
-    vendor: ['react', 'react-dom', 'react-router', 'lodash', 'semantic-ui-react', 'prop-types']
+    vendor: ['react', 'react-dom', 'react-router', 'lodash', 'semantic-ui-react', 'prop-types', 'react-materialize', 'jquery' ]
   },
   output: {
     path: path.join(__dirname, '..', 'build-dev'),
@@ -77,6 +77,10 @@ module.exports = function(env){
     }),
      new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(env)
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
