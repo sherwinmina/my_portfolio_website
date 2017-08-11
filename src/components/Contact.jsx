@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import { Grid, Form, TextArea, Container, Divider, Input, Icon } from 'semantic-ui-react';
+import { Grid, Form, TextArea, Container, Divider, Input, Icon, Image} from 'semantic-ui-react';
 import {Button} from 'react-materialize';
 
 
 class Contact extends Component {
   render () {
     return (
-      <Container>
+      <Container text  textAlign='center'>
         <h2>Say Hello</h2>
         <Divider></Divider>
+        <Image fluid src='https://s-media-cache-ak0.pinimg.com/originals/80/2c/c7/802cc778a9c4550bc6ab90654d2e007b.jpg' />
+        
 
-          <p>Thank you for visiting my site. Let's get in touch</p>
-          <Icon className="iconLink" name='github' size='huge'/>
-          <Icon className="iconLink" name='mail outline' size='huge'/>
-          <Icon className="iconLink" name='github' size='huge'/>
+          <p>Thank you for visiting my site. Let's get in touch.</p>
+          <Icon className="iconLink" name='github' size='large'/>
+          <Icon className="iconLink" name='mail outline' size='large'/>
+         
 
           
         

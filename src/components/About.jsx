@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import {Link} from 'react-router'
-import {Grid, Container, Button, Divider, Segment, Image} from 'semantic-ui-react';
+import {Grid, Container, Button, Divider, Segment, Image, Item} from 'semantic-ui-react';
 
 import '../styles/About.scss'
 
@@ -9,7 +9,6 @@ import '../styles/About.scss'
 const Tools = () => <Container text><Grid celled='internally' columns='equal'>
 
     <Grid.Row>
-     
       <Grid.Column >
         <h4>Javascript</h4>
         <li>JQuery</li>
@@ -65,47 +64,54 @@ const Tools = () => <Container text><Grid celled='internally' columns='equal'>
 export default class About extends Component {
   render() {
      return (
-      <div  id='container'>
-
+      <div>
       <Grid id="right" mobile={16} tablet={16} computer={16}>
-            <div >
-              <div id='headline'>Designer & Coder</div>
-              <Divider/>
+           
               <Container>
-                <Image id='profile' size='small' avatar centered src='https://drive.google.com/uc?id=0By7dMnbpFyGxVjdpUE1JWEJqVmc'></Image>
-              </Container>
-              <p id='about'>Hello, I'm Sherwin Mina. I'm a web developer base in San Francisco, CA. I enjoy working on the front-end and UI development, but could also get my hands dirty working on the backend. My favorite go to stack are React, Redux, SCSS and Node.</p>
+               <div id='headline'>Designer & Coder</div>
+              <Divider/>
+               </Container>
 
-              <p>I'm constantly learning new technolgies and seeking new adventures</p>
+              <Grid  id='profile' celled='internally' columns='equal'>
+                <Grid.Column >
+                   <Image size='medium' bordered floated='right' src='https://drive.google.com/uc?id=0By7dMnbpFyGxVjdpUE1JWEJqVmc'></Image>
+                </Grid.Column>
 
-              <h5>Check out some of my work</h5>
-              <Link to='Portfolio'>Portfolio</Link>
-              <h5>Or hit me up.</h5>
+                <Grid.Column textAlign='center'>
+                    <Item verticalAlign='middle'>
 
-             
+                     <Item.Content verticalAlign='middle'>
+                         <h5>Check out some of my work</h5>
+                    <Link to='Portfolio'><h5>Portfolio</h5></Link>
+                    <h5><Link to='Contact'>Or hit me up.</Link></h5>
+                    </Item.Content>
+                   
+                  </Item>
+                </Grid.Column>
+                
+              </Grid>
                
-            </div> 
-          </Grid>
+             
+
+              <Container text id='about'>
+                <p >Hello, I'm Sherwin Mina. I'm a web developer base in San Francisco, CA. I enjoy working on the front-end and UI development, but could also get my hands dirty working on the backend. My favorite go to stack are React, Redux, SCSS and Node.</p>
+                <p>I'm constantly learning new technolgies and seeking new challenges</p>
+              </Container>               
+           
+      </Grid>
 
         <Grid >
           <Grid id="left" mobile={16} tablet={16} computer={16}>
-             <Image  size='medium' shape='rounded' centered bordered  src='https://cdn.vox-cdn.com/thumbor/TXkOq7bnxQ7x6czLQBWknY9NiHE=/0x0:640x480/1400x1050/cdn.vox-cdn.com/uploads/chorus_image/image/49517779/20160315-san-francisco.0.jpg' />
+             <Image centered src='https://4.bp.blogspot.com/_zqFoq3qej2c/Swbj80vUe8I/AAAAAAABJ08/oKE7F_5pqIQ/s640/leaving+broadway.jpg' />
                
-             <Container>
+             <Container id='tools'>
              <h2 >Tools</h2>
              <Divider></Divider>
               <Tools/>
             </Container>
   
           </Grid>
-
-
-          
         </Grid>
-            
-       
-
-
       </div>
     );
   }
