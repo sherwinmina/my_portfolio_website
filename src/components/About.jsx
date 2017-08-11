@@ -26,7 +26,7 @@ const Tools = () => <Container text><Grid celled='internally' columns='equal'>
        <h4>Style/Preprocessor</h4> 
         <li>CSS3</li> 
         <li>SCSS/SASS</li>
-        <li>Smantic UI/ Material UI/ Bootstrap</li>
+        <li> Bootstrap/ Semantic UI/ Material UI</li>
       </Grid.Column>
       <Grid.Column >
         <h4>Front-end Framework</h4>
@@ -66,20 +66,8 @@ export default class About extends Component {
   render() {
      return (
       <div  id='container'>
-        <Grid reversed='mobile tablet'  stackable columns={2}>
-          <Grid.Column id="left" mobile={16} tablet={16} computer={8}>
-             <Image  size='medium' shape='rounded' centered bordered  src='https://cdn.vox-cdn.com/thumbor/TXkOq7bnxQ7x6czLQBWknY9NiHE=/0x0:640x480/1400x1050/cdn.vox-cdn.com/uploads/chorus_image/image/49517779/20160315-san-francisco.0.jpg' />
-               
-             <Container>
-             <h2 >Tools</h2>
-             <Divider></Divider>
-              <Tools/>
-            </Container>
-  
-          </Grid.Column>
 
-
-          <Grid.Column id="right" mobile={16} tablet={16} computer={8}>
+      <Grid id="right" mobile={16} tablet={16} computer={16}>
             <div >
               <div id='headline'>Designer & Coder</div>
               <Divider/>
@@ -97,7 +85,22 @@ export default class About extends Component {
              
                
             </div> 
-          </Grid.Column>
+          </Grid>
+
+        <Grid >
+          <Grid id="left" mobile={16} tablet={16} computer={16}>
+             <Image  size='medium' shape='rounded' centered bordered  src='https://cdn.vox-cdn.com/thumbor/TXkOq7bnxQ7x6czLQBWknY9NiHE=/0x0:640x480/1400x1050/cdn.vox-cdn.com/uploads/chorus_image/image/49517779/20160315-san-francisco.0.jpg' />
+               
+             <Container>
+             <h2 >Tools</h2>
+             <Divider></Divider>
+              <Tools/>
+            </Container>
+  
+          </Grid>
+
+
+          
         </Grid>
             
        

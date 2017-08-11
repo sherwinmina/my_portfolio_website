@@ -64,17 +64,12 @@ export default class Header extends Component {
               <div className='tag' >Github</div> 
             </Icon>
             </a>
-            
 
-            <Icon className="iconLink" name='linkedin square' size='large'>
-              <div className='tag'>Linkedin</div>
-            </Icon>
-            <Icon className="iconLink" name='facebook square'  size='large'>
-              <div className='tag'>Facebook</div>
-            </Icon>
-            <Icon className="iconLink" name='codepen'  size='large'>
-              <div className='tag'>CodePen</div>
-            </Icon>
+            <a  href='https://codepen.io/Sherwin'  target="_blank">
+              <Icon className="iconLink" name='codepen'  size='large'>
+                <div className='tag'>CodePen</div>
+              </Icon>
+            </a>
           </div>
           </div>
           
