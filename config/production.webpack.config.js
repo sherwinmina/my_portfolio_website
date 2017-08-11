@@ -90,6 +90,10 @@ module.exports = function(env) {
       },
       mangle: false
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
