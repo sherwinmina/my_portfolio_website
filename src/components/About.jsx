@@ -74,16 +74,16 @@ export default class About extends Component {
 
               <Grid  id='profile' celled='internally' columns='equal'>
                 <Grid.Column >
-                   <Image size='medium' bordered floated='right' src='https://drive.google.com/uc?id=0By7dMnbpFyGxVjdpUE1JWEJqVmc'></Image>
+                   <Image size='medium' floated='right' avatar src='https://drive.google.com/uc?id=0By7dMnbpFyGxVjdpUE1JWEJqVmc'></Image>
                 </Grid.Column>
 
-                <Grid.Column textAlign='center'>
-                    <Item verticalAlign='middle'>
+                <Grid.Column id='profile'>
+                    <Item >
 
                      <Item.Content verticalAlign='middle'>
                          <h5>Check out some of my work</h5>
                     <Link to='Portfolio'><h5>Portfolio</h5></Link>
-                    <h5><Link to='Contact'>Or hit me up.</Link></h5>
+                      <h5><Link to='Contact'>Or hit me up.</Link></h5>
                     </Item.Content>
                    
                   </Item>
