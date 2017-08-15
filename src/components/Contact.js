@@ -20,10 +20,6 @@ class Contact extends Component {
             <Icon className="iconLink" name='mail outline' size='large'/>
           </a>
         
-         
-
-          
-        
       </Container>
     )
   }
