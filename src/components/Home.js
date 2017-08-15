@@ -15,7 +15,7 @@ class Home extends Component {
             <Container>
            
               <div className="content2">
-                  <Image className='photo' src='https://drive.google.com/uc?id=0By7dMnbpFyGxVjdpUE1JWEJqVmc' />
+                  <Image className='photo' avatar size='medium' src='https://drive.google.com/uc?id=0By7dMnbpFyGxcTVwR1VlbUFIZ2c' />
                   <Divider/>
                   <p id='greeting'> >_ Hello, Internet...</p>
                   <p id='tagline'>Let's Build Something together</p>

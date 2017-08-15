@@ -13,8 +13,13 @@ class Contact extends Component {
         
 
           <p>Thank you for visiting my site. Let's get in touch.</p>
-          <Icon className="iconLink" name='github' size='large'/>
-          <Icon className="iconLink" name='mail outline' size='large'/>
+           <a  href='https://github.com/sherwinmina'  target="_blank">
+            <Icon className="iconLink" name='github' size='large'/>
+           </a>
+          <a href= "mailto:sherwinmina@yahoo.com" >
+            <Icon className="iconLink" name='mail outline' size='large'/>
+          </a>
+        
          
 
           
