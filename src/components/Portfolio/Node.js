@@ -37,8 +37,10 @@ class Node extends Component {
                     </p>
 
                     <h4>Technologies used</h4>
-                    <li> React </li>
-                    <li> React Native </li>
+                    <li> Node </li>
+                    <li> express </li>
+                    <li> socket.io </li>
+                    <li> mocha </li>
 
                     <Button.Group style={{paddingTop: '12px'}}>
                       <Button attached="left">
@@ -50,7 +52,11 @@ class Node extends Component {
                           Source Code
                         </a>
                       </Button>
-                      <Button attached="right">Demo</Button>;
+                      <Button attached="right"> <a
+                          href="https://chat-app-websocket.herokuapp.com/"
+                          target="_blank"
+                        >Demo</a>
+                        </Button>;
                       
                     </Button.Group>
                   </div>

@@ -26,7 +26,13 @@ const Tools = () => <Container text><Grid celled='internally' columns='equal'>
         <li>CSS3</li> 
         <li>SCSS/SASS</li>
         <li> Bootstrap/ Semantic UI/ Material UI</li>
+
+        <h4>Build Tools</h4> 
+        <li>Webpack</li> 
+        <li>Gulp</li>
+    
       </Grid.Column>
+
       <Grid.Column >
         <h4>Front-end Framework</h4>
         <li>React</li>

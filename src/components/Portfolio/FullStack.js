@@ -40,6 +40,7 @@ class Frontend extends Component {
                     <li> Redux </li>
                     <li> Webpack </li>
                     <li> firebase </li>
+                    <li> OAuth </li>
 
                     <Button.Group style={{paddingTop: '12px'}}>
                       <Button attached="left">
