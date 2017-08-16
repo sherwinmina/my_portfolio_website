@@ -56,7 +56,12 @@ const ImperfectProduce = () =>
                 Source Code
               </a>
             </Button>
-            <Button attached="right">Demo</Button>
+            <Button attached="right">
+              <a href="http://imperfect-produce-redesign.surge.sh/" target="_blank">
+                 Demo
+              </a>
+
+            </Button>
           </Button.Group>
           
         </div>
