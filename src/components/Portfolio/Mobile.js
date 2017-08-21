@@ -20,7 +20,7 @@ class Frontend extends Component {
                 <Grid.Column className="left" width={7}>
                   <Image
                     size="large"
-                    src="https://marvelapp.com/static/site/images/features/prototype/prototype.png"
+                    src="https://drive.google.com/uc?id=0By7dMnbpFyGxTjBId3pWZ2JCNEE"
                   />
                 </Grid.Column>
                 <Grid.Column className="right" width={9}>
@@ -39,6 +39,11 @@ class Frontend extends Component {
                     <li> React </li>
                     <li> React Native </li>
                     <li> Redux </li>
+                    <li>Axios </li>
+                    <li>Exponent </li>
+                    <li> Google Api </li>
+                    <li> Indeed Api </li>
+
                     
                     <div  style={{paddingTop: '12px'}}>
                       <Button>

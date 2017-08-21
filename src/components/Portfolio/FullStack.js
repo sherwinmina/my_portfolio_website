@@ -20,7 +20,7 @@ class Frontend extends Component {
                 <Grid.Column className="left" width={7}>
                   <Image
                     size="large"
-                    src="https://marvelapp.com/static/site/images/features/prototype/prototype.png"
+                    src="https://drive.google.com/uc?id=0By7dMnbpFyGxdTNrMFZuZGZuaXc"
                   />
                 </Grid.Column>
                 <Grid.Column className="right" width={9}>

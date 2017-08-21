@@ -36,7 +36,14 @@ class Miscellaneous extends Component {
                     </p>
 
                     <h4>Technologies used</h4>
-                   
+                    <li>React</li>
+                    <li>Flux implementation</li>
+                    <li>Node</li>
+                    <li>Rxjs</li>
+                    <li>Socket.Io</li>
+                    <li>Gulp</li>
+                    <li>Webpack</li>
+
                     <Button.Group style={{paddingTop: '12px'}}>
                       <Button attached="left">
                         {" "}

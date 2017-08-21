@@ -7,9 +7,20 @@ class Frontend extends Component {
       <div>
         <Card.Group>
         <Container id='box'>
-        <ImperfectProduce/>
-         
+        <ImperfectProduce/>         
         </Container>
+
+        <Container id="box">
+          <Calculator />
+        </Container>
+
+        <Container id="box">
+          <Weather />
+        </Container>;
+
+
+        
+
         
         </Card.Group>
       </div>
@@ -17,13 +28,64 @@ class Frontend extends Component {
   }
 }
 
-const ImperfectProduce = () => 
+const Calculator = () => 
   <Grid celled="internally" stackable className="box" columns={7}>
     <Grid.Row className="box">
       <Grid.Column className="left" width={7}>
         <Image
           size="large"
-          src="https://marvelapp.com/static/site/images/features/prototype/prototype.png"
+          src="https://drive.google.com/uc?id=0By7dMnbpFyGxdkFtQVdoNGZLZFk"
+        />
+      </Grid.Column>
+      <Grid.Column className="right" width={9}>
+        <div className="content">
+          <div id="title">
+            <h1>Calculator</h1>
+          </div>
+          <Divider />
+
+          <h5>React Calculator</h5>
+          <p>
+           A simple react calculator app
+          </p>
+
+          <h4>Technologies used</h4>
+         
+          <li> React </li>
+          <li> CSS </li>
+          <li> Webpack </li>
+
+          
+          <Button.Group style={{paddingTop: '12px'}}>
+            <Button attached="left">
+              {" "}
+              <a
+                href="https://github.com/sherwinmina/Calculator-React"
+                target="_blank"
+              >
+                Source Code
+              </a>
+            </Button>
+            <Button attached="right">
+              <a href="http://react-calculator1.surge.sh/" target="_blank">
+                 Demo
+              </a>
+
+            </Button>
+          </Button.Group>
+          
+        </div>
+      </Grid.Column>
+    </Grid.Row>
+  </Grid>
+
+  const ImperfectProduce = () => (
+  <Grid celled="internally" stackable className="box" columns={7}>
+    <Grid.Row className="box">
+      <Grid.Column className="left" width={7}>
+        <Image
+          size="large"
+          src="https://drive.google.com/uc?id=0By7dMnbpFyGxMVVUdWRzR01fcW8"
         />
       </Grid.Column>
       <Grid.Column className="right" width={9}>
@@ -39,14 +101,13 @@ const ImperfectProduce = () =>
           </p>
 
           <h4>Technologies used</h4>
-         
+
           <li> React </li>
           <li> Semantic-UI </li>
           <li> SCSS </li>
           <li> Webpack </li>
 
-          
-          <Button.Group style={{paddingTop: '12px'}}>
+          <Button.Group style={{ paddingTop: "12px" }}>
             <Button attached="left">
               {" "}
               <a
@@ -57,17 +118,77 @@ const ImperfectProduce = () =>
               </a>
             </Button>
             <Button attached="right">
-              <a href="http://imperfect-produce-redesign.surge.sh/" target="_blank">
-                 Demo
+              <a
+                href="http://imperfect-produce-redesign.surge.sh/"
+                target="_blank"
+              >
+                Demo
               </a>
 
             </Button>
           </Button.Group>
-          
+
         </div>
       </Grid.Column>
     </Grid.Row>
   </Grid>
+);
+
+const Weather = () => (
+  <Grid celled="internally" stackable className="box" columns={7}>
+    <Grid.Row className="box">
+      <Grid.Column className="left" width={7}>
+        <Image
+          size="large"
+          src="https://drive.google.com/uc?id=0By7dMnbpFyGxNzlnWXJXU1NFdW8"
+        />
+      </Grid.Column>
+      <Grid.Column className="right" width={9}>
+        <div className="content">
+          <div id="title">
+            <h1>Weather App</h1>
+          </div>
+          <Divider />
+
+          <h5>Weahter App</h5>
+          <p>
+            A simple Weather app 
+          </p>
+
+          <h4>Technologies used</h4>
+
+          <li> React </li>
+          <li> Redux </li>
+
+          <li> CSS </li>
+          <li> Webpack </li>
+          <li> WunderGround API </li>
+
+
+          <Button.Group style={{ paddingTop: "12px" }}>
+            <Button attached="left">
+              {" "}
+              <a
+                href="https://github.com/sherwinmina/Weather-chart"
+                target="_blank"
+              >
+                Source Code
+              </a>
+            </Button>
+            <Button attached="right">
+              <a href="http://weather-chart.surge.sh/" target="_blank">
+                Demo
+              </a>
+
+            </Button>
+          </Button.Group>
+
+        </div>
+      </Grid.Column>
+    </Grid.Row>
+  </Grid>
+);
+
 
 
 export default Frontend;
