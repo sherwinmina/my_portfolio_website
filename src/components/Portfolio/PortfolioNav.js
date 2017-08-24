@@ -3,8 +3,11 @@ import {Tabs, Tab} from 'react-materialize';
 // import {Link} from 'react-router';
 
 import Frontend from './Frontend';
-import All from './All';
-
+import Node from "./Node";
+import FullStack from "./FullStack";
+import Mobile from "./Mobile";
+import Miscellaneous from "./Miscellaneous";
+import All from "./All";
 
 class PortfolioNav extends Component {
   render () {
@@ -18,16 +21,18 @@ class PortfolioNav extends Component {
              <Frontend/>
           </Tab>
           <Tab title="Full-Stack" className='tab col s2'>
-            Full-Stack
+            <FullStack/>
           </Tab>
           <Tab title="Node" className='tab col s2'>
-            <All/>
+           <Node/>
           </Tab>
-          <Tab title="Mobile" className='tab col s2'>Mobile</Tab>
-          <Tab title="Miscellaneous" className='tab col s2'>Mobile</Tab>
+          <Tab title="Mobile" className='tab col s2'>
+            <Mobile />
+          </Tab>
+          <Tab title="Miscellaneous" className='tab col s2'>
+            <Miscellaneous/>
+          </Tab>
         </Tabs>
-
-     
       </div>
     )
   }
