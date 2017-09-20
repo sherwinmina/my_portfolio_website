@@ -4,7 +4,6 @@ import { Link } from 'react-router';
 import PropTypes from 'prop-types';
 import '../styles/NavBar.scss'
 
-
 // import Radium, { Style } from 'radium';
 import { Button, Icon, Divider } from 'semantic-ui-react';
 
@@ -71,21 +70,17 @@ export default class Header extends Component {
               </Icon>
             </a>
           </div>
-          </div>
-          
-       
+          </div>     
        </div>
     );
   }
 }
-
 
 const HomeIcon = (props) => (
   <SvgIcon {...props}>
     <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
   </SvgIcon>
 );
-
 
 const divstyles = {
    fontFamily: 'Gruppo'

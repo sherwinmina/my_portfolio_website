@@ -10,7 +10,7 @@ import {
 } from "semantic-ui-react";
 
 
-function WorkCard(props){
+const WorkCard = (props) => {
   return (
     <div>
       <Grid celled="internally" stackable className="box" columns={7}>

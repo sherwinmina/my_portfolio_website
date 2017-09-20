@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, browserHistory, hashHistory } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 
 import routes from './routes';
 
-// consider using hashHistory instead for refreshing pages
+
 
 ReactDOM.render(
-   <Router history={hashHistory} routes={routes} />
+   <BrowserRouter routes={routes} />
   , document.querySelector('.main'));

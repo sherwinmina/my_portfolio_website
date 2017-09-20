@@ -8,7 +8,7 @@ module.exports = function(env){
   return {
     entry: {
     main: path.resolve(__dirname, '..', 'src', 'index' ),
-    vendor: ['react', 'react-dom', 'react-router', 'lodash', 'semantic-ui-react', 'prop-types', 'react-materialize', 'jquery', 'materialize-css' ]
+    vendor: ['react', 'react-dom', 'react-router', 'semantic-ui-react', 'prop-types', 'react-materialize', 'materialize-css' ]
   },
   output: {
     path: path.join(__dirname, '..', 'build-dev'),

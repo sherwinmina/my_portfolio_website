@@ -9,7 +9,7 @@ module.exports = function(env) {
   return {
     entry: {
     main: path.resolve(__dirname, '..', 'src', 'index' ),
-    vendor: ['react', 'react-dom', 'react-router', 'lodash', 'semantic-ui-react', 'prop-types']
+    vendor: ['react', 'react-dom', 'react-router', 'semantic-ui-react', 'prop-types']
   },
   output: {
     path: path.join(__dirname, '..', 'build-prod'),

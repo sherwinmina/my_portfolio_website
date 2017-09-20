@@ -91,7 +91,6 @@ export default class About extends Component {
                     <Link to='Portfolio'><h5>Portfolio</h5></Link>
                       <h5><Link to='Contact'>Or hit me up.</Link></h5>
                     </Item.Content>
-                   
                   </Item>
                 </Grid.Column>
                 
