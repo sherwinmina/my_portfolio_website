@@ -7,11 +7,6 @@ module.exports = function(env) {
   return webpackConfig;
 }
 
-
-
-
-
-
 // var path = require('path');
 // var ExtractTextPlugin = require('extract-text-webpack-plugin');
 // var webpack = require('webpack');
