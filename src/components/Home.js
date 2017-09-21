@@ -15,14 +15,14 @@ class Home extends Component {
             <Container>
            
               <div className="content2">
-                  <Image className='photo' avatar size='medium' src='https://drive.google.com/uc?id=0By7dMnbpFyGxcTVwR1VlbUFIZ2c' />
+                  <Image className='photo' src='https://drive.google.com/uc?id=0By7dMnbpFyGxcTVwR1VlbUFIZ2c' />
                   <Divider/>
                   <p id='greeting'> >_ Hello, Internet...</p>
                   <p id='tagline'>Let's Build Something together</p>
                   <Divider/>
                   <p id='design' > DESIGN | DEVELOP | BUILD </p>
                  
-                  <Link id='enter' to="Portfolio"> ENTER </Link> 
+                  <Link id='enter' to="/portfolio"> ENTER </Link> 
               </div>
             </Container>
           </div>

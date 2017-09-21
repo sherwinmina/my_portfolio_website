@@ -16,18 +16,16 @@ import '../styles/app.scss';
 class App extends Component {
   render() {
      return <div>
-         <Switch>
-           <Route exact path="/home" component={Home} />
-         </Switch>
-
          <div className="MainContainer">
            <NavBar />
+
            <div className="right-container">
              <Switch>
+               <Route exact path="/" component={Home} />
                <Route exact path="/about" component={About} />
-               <Route exact path="/" component={Portfolio} />
+               <Route exact path="/portfolio" component={Portfolio} />
                <Route exact path="/contact" component={Contact} />
-               <Redirect to="/" />
+               <Redirect to='/portfolio'/>
              </Switch>
            </div>
          </div>

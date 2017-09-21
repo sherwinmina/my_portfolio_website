@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {Tabs, Tab} from 'react-materialize';
 import {Link} from 'react-router';
+
+import { Tab } from "semantic-ui-react";
 
 import Frontend from './Frontend';
 import Node from "./Node";
@@ -9,33 +10,46 @@ import Mobile from "./Mobile";
 import Miscellaneous from "./Miscellaneous";
 import All from "./All";
 
-class PortfolioNav extends Component {
-  render () {
+const PortfolioNav = () => {
     return (
-      <div>
-        <Tabs className='tabs-swipe-demo blue-text text-darken-2'>
-          <Tab title="All Projects" className='tab col s2 blue-text text-darken-2'>
-            <All/>
-          </Tab>
-          <Tab title="Front-end" className='tab col s2'>
-             <Frontend/>
-          </Tab>
-          <Tab title="Full-Stack" className='tab col s2'>
-            <FullStack/>
-          </Tab>
-          <Tab title="Node" className='tab col s2'>
-           <Node/>
-          </Tab>
-          <Tab title="Mobile" className='tab col s2'>
-            <Mobile />
-          </Tab>
-          <Tab title="Miscellaneous" className='tab col s2'>
-            <Miscellaneous/>
-          </Tab>
-        </Tabs>
-      </div>
+      <TabExampleSecondaryPointing/>
     )
-  }
 }
 
+const panes = [
+  {
+    menuItem: "All Projects",
+    render: () => <All/>
+  },
+  {
+    menuItem: "Frontend",
+    render: () => <Frontend/>
+  },
+  {
+    menuItem: "Full-Stack",
+    render: () => <FullStack/>
+  },
+  {
+    menuItem: "Node",
+    render: () => <Node/>
+  }
+  ,
+  {
+    menuItem: "Miscellaneous",
+    render: () => <Miscellaneous/>
+  }
+];
+
+const TabExampleSecondaryPointing = () => (
+  <Tab
+    menu={{ color: "#21649B", inverted: true, attached: false, tabular: false }}
+    panes={panes}
+    className="tab"
+  />
+);
+
 export default PortfolioNav
+
+const styles = {
+  color: 'white'
+}

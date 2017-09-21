@@ -17,12 +17,12 @@ class NavBar extends Component {
           <div className="Navbar">
           <h3 className="logo">SM</h3>
         
-          <Link className='link' to="/home" > 
+          <Link className='link' to="/" > 
                <Icon inverted className="icon" name="browser" size='large' />
               <div className='label' name='home'>Home</div>
             </Link>
 
-            <Link className='link' to="/" > 
+            <Link className='link' to="/portfolio" > 
               <Icon inverted className="icon" name="travel" size='large' />
               <div className='label' name='/'>Portfolio</div>
             </Link>

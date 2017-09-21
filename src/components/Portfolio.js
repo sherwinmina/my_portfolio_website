@@ -10,7 +10,6 @@ export default class Portfolio extends Component {
      return (
        <div className='portfolio'> 
         <div className="header"><h1>Portfolio</h1></div>
-        <Divider/>
         <PortfolioNav/>      
        </div>
     );

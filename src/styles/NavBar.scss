@@ -8,15 +8,14 @@
   flex: 1;
   // color: white;
   background: #21262b;
-  min-height: 500px;
+  height: 100%;
   align-items: 'center';
   align-content: 'center';
-  border-bottom-right-radius: 30px;
-  border-right: 4px solid orange;
+  border-right: 2px solid #E6A940;
  
   .icon:hover{
     color: orange;
-    padding-left: 10px;
+    
   }
 
   .link{
@@ -25,17 +24,20 @@
   }
 
   .link:hover{
-   background: beige;
-   color: #191500;
+   background: #21649B;
+   color: #E3EBEE;
+   .icon {
+     color: #74F3FC;
+   }
   
    i{
      font-size: 15px;
    }
+
    .icon {
-     color: orange;
+     color: #ECB143;
      font-size: 25px;
    }
-   
   }
 }
 
@@ -53,16 +55,26 @@
 }
 
 .Navbar:hover {
-  color: beige;
-  
+  background: #2780C9;
+  .logo {
+    color: white;
+    background: #2C2B2B;
+  }
+
   .label {
-    display: inline;
+    display: flex;
+    flex-direction: column;
     padding-left: 15px;
     padding-right: 10px;
   }
 
   .icon{
     padding-left: 7px;
+    color: #F3A348;
+  }
+  .label:hover {
+    padding-left: 7px;
+    color: #F3A348;
   }
 
   .iconLink{

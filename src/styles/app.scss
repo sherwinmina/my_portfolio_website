@@ -15,19 +15,20 @@ html, body{
 
 ::-webkit-scrollbar-track
 {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgb(184, 131, 57);
 }
 
 ::-webkit-scrollbar-thumb
 {
-  background: #1d2731;
-  border: 2px solid #984B43;
+  background: #132435;
+  border: 2px solid #DD9C47;
+  height: 10px;
 }
 
 .MainContainer{
   position: absolute; 
   display: flex;
-  background: #f4f4f4; 
+  background: #BBB7B3;
   height: 100%; 
   width: 100%;  
 }
