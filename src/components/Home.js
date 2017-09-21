@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Grid, Container, Button, Divider, Segment, Image} from 'semantic-ui-react';
-import {Link} from 'react-router';
+import {Link} from 'react-router-dom';
 
 import '../styles/Home.scss'
 // https://drive.google.com/uc?id=0By7dMnbpFyGxVjdpUE1JWEJqVmc

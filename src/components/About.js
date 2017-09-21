@@ -1,6 +1,5 @@
-import React from 'react';
-import { Component } from 'react';
-import {Link} from 'react-router'
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
 import {Grid, Container, Button, Divider, Segment, Image, Item} from 'semantic-ui-react';
 
 import '../styles/About.scss'
@@ -67,7 +66,7 @@ const Tools = () => <Container text><Grid celled='internally' columns='equal'>
   </Grid>
   </Container>;
 
-export default class About extends Component {
+  class About extends Component {
   render() {
      return (
       <div>
@@ -122,3 +121,4 @@ export default class About extends Component {
   }
 }
 
+export default About;

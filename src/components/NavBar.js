@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../styles/NavBar.scss'
 
@@ -8,53 +8,34 @@ import '../styles/NavBar.scss'
 import { Button, Icon, Divider } from 'semantic-ui-react';
 
 
-export default class Header extends Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      activeItem : 'home'
-    }
+class NavBar extends Component {
     
-    this.handleItemClick = this.handleItemClick.bind(this);
-
-  }
-
-   handleItemClick(e, { name }){
-     e.preventDefault();
-     this.setState({ activeItem: name })
-   } 
-
-
   render() {
-     const { activeItem } = this.state
-     console.log(activeItem)
+    
      return (
        <div>
           <div className="Navbar">
           <h3 className="logo">SM</h3>
         
-          <Link className='link' to="Home" > 
-               <Icon inverted className="icon" name="browser" size='large' onClick={() =>( this.setState({ activeItem: 'home' }))} />
+          <Link className='link' to="/home" > 
+               <Icon inverted className="icon" name="browser" size='large' />
               <div className='label' name='home'>Home</div>
             </Link>
 
-            <Link className='link' to="Portfolio" onClick={() =>( this.setState({ activeItem: 'portfolio' }))}> 
+            <Link className='link' to="/" > 
               <Icon inverted className="icon" name="travel" size='large' />
-              <div className='label' name='portfolio'>Portfolio</div>
+              <div className='label' name='/'>Portfolio</div>
             </Link>
 
-            <Link className='link' to="About" onClick={() =>( this.setState({ activeItem: 'about' }))}> 
+            <Link className='link' to="/about" > 
               <Icon inverted className="icon" name="smile" size='large' />
               <div className='label' name='about' >About</div>
             </Link>
 
-            <Link className='link' to="Contact" onClick={() =>( this.setState({ activeItem: 'contact' }))}>
+            <Link className='link' to="/contact" >
              <Icon inverted className="icon" name="mail" size='large' />
                 <div className='label' name='contact'>Contact</div>  
             </Link>
-
-          
 
           <div className="social">
             <Divider className='divider'/>
@@ -85,3 +66,5 @@ const HomeIcon = (props) => (
 const divstyles = {
    fontFamily: 'Gruppo'
 }
+
+export default NavBar

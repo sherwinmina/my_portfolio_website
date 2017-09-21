@@ -5,11 +5,6 @@ import PortfolioNav from './Portfolio/PortfolioNav';
 import {Grid, Container, Button, Icon, Divider, Card, Image } from 'semantic-ui-react';
 
 import "../styles/Portfolio.scss";
-
-
-
-
-
 export default class Portfolio extends Component {
   render() {
      return (

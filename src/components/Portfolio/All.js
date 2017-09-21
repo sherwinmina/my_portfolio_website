@@ -7,8 +7,6 @@ import FullStack from "./FullStack";
 import Mobile from "./Mobile";
 import Miscellaneous from "./Miscellaneous";
 
-
-
 class All extends Component {
   render () {
     return (

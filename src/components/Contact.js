@@ -27,15 +27,3 @@ class Contact extends Component {
 
 export default Contact
 
-
-// <Form action="mailto:sherwinmina@yahoo.com" method="post" enctype="text/plain">
-//            Name:
-//             <Input type="text" name="name"/>
-//             E-mail:
-//             <Input type="text" name="mail"/>
-//             Comment:
-//             <Input type="text" name="comment" size="50"/>
-//             <Input type="submit" value="Send"/>
-//             <Input type="reset" value="Reset"/>
-
-// </Form>  
