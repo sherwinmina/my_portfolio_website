@@ -4,7 +4,6 @@ import {Grid, Container, Button, Divider, Segment, Image, Item} from 'semantic-u
 
 import '../styles/About.scss'
 
-
 const Tools = () => <Container text><Grid celled='internally' columns='equal'>
 
     <Grid.Row>
@@ -66,59 +65,58 @@ const Tools = () => <Container text><Grid celled='internally' columns='equal'>
   </Grid>
   </Container>;
 
-  class About extends Component {
-  render() {
-     return (
-      <div>
-      <Grid id="right" mobile={16} tablet={16} computer={16}>
-           
-              <Container>
-               <div id='headline'>Designer & Coder</div>
-              <Divider/>
-               </Container>
+  const About = () =>{
+    return (
+    <div>
+    <Grid id="right" mobile={16} tablet={16} computer={16}>
+          
+            <Container>
+              <div id='headline'>Designer & Coder</div>
+            <Divider/>
+              </Container>
 
-              <Grid  id='profile' celled='internally' columns='equal'>
-                <Grid.Column >
-                   <Image size='medium' floated='right' avatar src='https://drive.google.com/uc?id=0By7dMnbpFyGxVjdpUE1JWEJqVmc'></Image>
-                </Grid.Column>
+            <Grid  id='profile' celled='internally' columns='equal'>
+              <Grid.Column >
+                  <Image size='medium' floated='right' avatar src='/public/Profile.jpg'></Image>
+              </Grid.Column>
 
-                <Grid.Column id='profile'>
-                    <Item >
+              <Grid.Column id='profile'>
+                  <Item >
 
-                     <Item.Content verticalAlign='middle'>
-                         <h5>Check out some of my work</h5>
-                    <Link to='Portfolio'><h5>Portfolio</h5></Link>
-                      <h5><Link to='Contact'>Or hit me up.</Link></h5>
-                    </Item.Content>
-                  </Item>
-                </Grid.Column>
-                
-              </Grid>
-               
-             
+                    <Item.Content verticalAlign='middle'>
+                        <h5>Check out some of my work</h5>
+                  <Link to='Portfolio'><h5>Portfolio</h5></Link>
+                    <h5><Link to='Contact'>Or hit me up.</Link></h5>
+                  </Item.Content>
+                </Item>
+              </Grid.Column>
+              
+            </Grid>
+              
+            
 
-              <Container text id='about'>
-                <p >Hello, I'm Sherwin Mina. I'm a web developer base in San Francisco, CA. I enjoy working on the front-end and UI development, but could also get my hands dirty working on the backend. My favorite go to stack are React, Redux, SCSS and Node.</p>
-                <p>I'm constantly learning new technolgies and seeking new challenges</p>
-              </Container>               
-           
-      </Grid>
+            <Container text id='about'>
+              <p >Hello, I'm Sherwin Mina. I'm a web developer base in San Francisco, CA. I enjoy working on the front-end and UI development, but could also get my hands dirty working on the backend. My favorite go to stack are React, Redux, SCSS and Node.</p>
+              <p>I'm constantly learning new technolgies and seeking new challenges</p>
+            </Container>               
+          
+    </Grid>
 
-        <Grid >
-          <Grid id="left" mobile={16} tablet={16} computer={16}>
-             <Image centered src='https://4.bp.blogspot.com/_zqFoq3qej2c/Swbj80vUe8I/AAAAAAABJ08/oKE7F_5pqIQ/s640/leaving+broadway.jpg' />
-               
-             <Container id='tools'>
-             <h2 >Tools</h2>
-             <Divider></Divider>
-              <Tools/>
-            </Container>
-  
-          </Grid>
+      <Grid >
+        <Grid id="left" mobile={16} tablet={16} computer={16}>
+            <Image centered src='/src/images/Profile.jpeg' />
+              
+            <Container id='tools'>
+            <h2 >Tools</h2>
+            <Divider></Divider>
+            <Tools/>
+          </Container>
+
         </Grid>
-      </div>
-    );
-  }
+      </Grid>
+    </div>
+  );
+
 }
 
 export default About;

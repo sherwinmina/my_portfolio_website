@@ -3,6 +3,8 @@ import {Grid, Container, Button, Divider, Segment, Image} from 'semantic-ui-reac
 import {Link} from 'react-router-dom';
 
 import '../styles/Home.scss'
+// import profile from "../public/photo.png";
+// console.log(profile)
 // https://drive.google.com/uc?id=0By7dMnbpFyGxVjdpUE1JWEJqVmc
 class Home extends Component {
   render () {
@@ -15,7 +17,7 @@ class Home extends Component {
             <Container>
            
               <div className="content2">
-                  <Image className='photo' src='https://drive.google.com/uc?id=0By7dMnbpFyGxcTVwR1VlbUFIZ2c' />
+                  <img className='photo' src='public/photo.png' />
                   <Divider/>
                   <p id='greeting'> >_ Hello, Internet...</p>
                   <p id='tagline'>Let's Build Something together</p>

@@ -1,40 +1,40 @@
 import React, { Component } from 'react';
 import {Grid, Container, Button, Icon, Divider, Card, Image } from 'semantic-ui-react';
+import WorkCard from '../common/WorkCard'
 
-class Frontend extends Component {
-  render () {
-    return (
-      <div>
+const Frontend = () => {
+    return <div>
         <Card.Group>
-        <Container id='box'>
-        <ImperfectProduce/>         
-        </Container>
+         
+          
 
-        <Container id="box">
-          <Calculator />
-        </Container>
+          <Container id="box">
+            <ImperfectProduce />
+          </Container>
 
-        <Container id="box">
-          <Weather />
-        </Container>;
-
-
-        
-
-        
+          <Container id="box">
+            <Calculator />
+          </Container>
+          <Container id="box">
+            <Weather />
+          </Container>
         </Card.Group>
-      </div>
-    )
-  }
+      </div>;
 }
+
+const cardBuilder = (
+  <Container id="box">
+    <WorkCard technology="react" />
+  </Container>
+);
 
 const Calculator = () => 
   <Grid celled="internally" stackable className="box" columns={7}>
     <Grid.Row className="box">
       <Grid.Column className="left" width={7}>
-        <Image
+        <img
           size="large"
-          src="https://drive.google.com/uc?id=0By7dMnbpFyGxdkFtQVdoNGZLZFk"
+          src="/public/projects/calculator.jpg"
         />
       </Grid.Column>
       <Grid.Column className="right" width={9}>
@@ -85,7 +85,7 @@ const Calculator = () =>
       <Grid.Column className="left" width={7}>
         <Image
           size="large"
-          src="https://drive.google.com/uc?id=0By7dMnbpFyGxMVVUdWRzR01fcW8"
+          src="/public/projects/imperfect.jpg"
         />
       </Grid.Column>
       <Grid.Column className="right" width={9}>
@@ -140,7 +140,7 @@ const Weather = () => (
       <Grid.Column className="left" width={7}>
         <Image
           size="large"
-          src="https://drive.google.com/uc?id=0By7dMnbpFyGxNzlnWXJXU1NFdW8"
+          src="/public/projects/weather-chart.jpg"
         />
       </Grid.Column>
       <Grid.Column className="right" width={9}>

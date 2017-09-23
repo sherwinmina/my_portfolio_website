@@ -9,13 +9,12 @@ import {
   Image
 } from "semantic-ui-react";
 
-class Frontend extends Component {
-  render() {
+const  Frontend = () => {
     return (
       <div>
         <Card.Group>
           <Container id="box">
-            <Grid celled="internally" stackable className="box" columns={7}>
+            <Grid celled="internally" stackable const Name="box" columns={7}>
               <Grid.Row className="box">
                 <Grid.Column className="left" width={7}>
                   <Image
@@ -64,7 +63,6 @@ class Frontend extends Component {
         </Card.Group>
       </div>
     );
-  }
 }
 
 export default Frontend;

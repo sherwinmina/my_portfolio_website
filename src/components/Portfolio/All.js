@@ -7,8 +7,7 @@ import FullStack from "./FullStack";
 import Mobile from "./Mobile";
 import Miscellaneous from "./Miscellaneous";
 
-class All extends Component {
-  render () {
+const All = () => {
     return (
       <div>
        <Frontend/>
@@ -17,8 +16,7 @@ class All extends Component {
        <Mobile/>
        <Miscellaneous/>
       </div>
-    )
-  }
+    )  
 }
 
 export default All
