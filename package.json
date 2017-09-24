@@ -5,15 +5,13 @@
   "main": "index.js",
   "repository": "",
   "scripts": {
-    "start": "webpack-dev-server --progress --inline --hot" ,
+    "start": "webpack-dev-server --progress --inline --hot",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
     "webpack:build-development": "webpack --env=development",
     "webpack:serve-development": "webpack-dev-server --env=development",
     "webpack:build-production": "webpack --env=production",
     "webpack:serve-production": "webpack-dev-server --env=production",
-    "serve-local:production": "cd build-prod; http-server -p 8000 -o",
-    "serve-local:development": "cd build-dev; http-server -p 7000 -o",
     "surge-deploy:production": "yarn run webpack:build-production; surge -p build-prod -d sherwinmina-dev.surge.sh",
     "surge-deploy:development": "yarn run webpack:build-development; surge -p build-dev -d sherwinmina-dev.surge.sh",
     "surge-deploy:all": "yarn run surge-deploy:production; yarn run surge-deploy:development"
@@ -58,6 +56,9 @@
     "react-materialize": "^1.0.14",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-router-transition": "^1.0.1",
+    "react-transition-group": "^1.2.0",
+    "react-transitions": "^1.0.0",
     "semantic-ui-css": "^2.2.11",
     "semantic-ui-react": "^0.71.1"
   }

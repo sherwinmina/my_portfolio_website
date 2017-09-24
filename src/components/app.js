@@ -9,7 +9,6 @@ import Portfolio from './Portfolio';
 import Contact from './Contact';
 import Home from './Home';
 
-
 // import 'semantic-ui-css/semantic.min.css';
 import '../styles/app.scss';
 
@@ -21,11 +20,11 @@ class App extends Component {
 
            <div className="right-container">
              <Switch>
-               <Route exact path="/" component={Home} />
-               <Route exact path="/about" component={About} />
-               <Route exact path="/portfolio" component={Portfolio} />
-               <Route exact path="/contact" component={Contact} />
-               <Redirect to='/portfolio'/>
+                 <Route exact path="/" component={Home} id="list-page" className="transition-item" />
+                 <Route exact path="/about" component={About} />
+                 <Route exact path="/portfolio" component={Portfolio}  />
+                 <Route exact path="/contact" component={Contact} />
+                 <Redirect to="/portfolio" />
              </Switch>
            </div>
          </div>
