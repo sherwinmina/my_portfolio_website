@@ -12,17 +12,13 @@ import {
 
 class Node extends Component {
   render () {
-    return (
-      <div>
+    return <div>
         <Card.Group>
           <Container id="box">
             <Grid celled="internally" stackable className="box" columns={7}>
               <Grid.Row className="box">
                 <Grid.Column className="left" width={7}>
-                  <Image
-                    size="large"
-                    src="https://drive.google.com/uc?id=0By7dMnbpFyGxTEh0azh3XzAwb0k"
-                  />
+                  <Image size="large" src={require("../../../public/projects/chat.jpg")} />
                 </Grid.Column>
                 <Grid.Column className="right" width={9}>
                   <div className="content">
@@ -32,9 +28,7 @@ class Node extends Component {
                     <Divider />
 
                     <h5>A simple chat application using Socket.io</h5>
-                    <p>
-                      Chat application using node
-                    </p>
+                    <p>Chat application using node</p>
 
                     <h4>Technologies used</h4>
                     <li> Node </li>
@@ -42,33 +36,27 @@ class Node extends Component {
                     <li> socket.io </li>
                     <li> mocha </li>
 
-                    <Button.Group style={{paddingTop: '12px'}}>
+                    <Button.Group style={{ paddingTop: "12px" }}>
                       <Button attached="left">
                         {" "}
-                        <a
-                          href="https://github.com/sherwinmina/job-finder"
-                          target="_blank"
-                        >
+                        <a href="https://github.com/sherwinmina/job-finder" target="_blank">
                           Source Code
                         </a>
                       </Button>
-                      <Button attached="right"> <a
-                          href="https://chat-app-websocket.herokuapp.com/"
-                          target="_blank"
-                        >Demo</a>
-                        </Button>;
-                      
+                      <Button attached="right">
+                        {" "}
+                        <a href="https://chat-app-websocket.herokuapp.com/" target="_blank">
+                          Demo
+                        </a>
+                      </Button>;
                     </Button.Group>
                   </div>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
-
           </Container>
         </Card.Group>
-
-      </div>
-    )
+      </div>;
   }
 }
 

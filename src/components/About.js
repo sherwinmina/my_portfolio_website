@@ -77,7 +77,7 @@ const Tools = () => <Container text><Grid celled='internally' columns='equal'>
 
             <Grid  id='profile' celled='internally' columns='equal'>
               <Grid.Column >
-                  <Image size='medium' floated='right' avatar src='/public/Profile.jpg'></Image>
+                  <Image size='medium' floated='right' avatar src={require('../../public/Profile.jpg')}></Image>
               </Grid.Column>
 
               <Grid.Column id='profile'>

@@ -17,7 +17,7 @@ class Home extends Component {
             <Container>
            
               <div className="content2">
-                  <img className='photo' src='public/photo.png' />
+                  <img className='photo' src={require('../../public/photo.png')}/>
                   <Divider/>
                   <p id='greeting'> >_ Hello, Internet...</p>
                   <p id='tagline'>Let's Build Something together</p>

@@ -121,9 +121,9 @@ module.exports = function(env) {
       vendor: ["react", "react-dom", "react-router", "prop-types"]
     },
     output: {
-      path: path.join(__dirname, "build"),
+      path: path.join(__dirname, '..', "build-dev"),
       publicPath: "/",
-      filename: "[name].[hash].bundle.js"
+      filename: "[name].bundle.js"
     },
     module: {
       rules: [
@@ -140,8 +140,6 @@ module.exports = function(env) {
             {
               loader: "html-loader",
               options: {
-                minimize: true,
-                removeComments: false,
                 collapseWhitespace: false
               }
             }
@@ -149,9 +147,11 @@ module.exports = function(env) {
         },
         {
           test: /\.css$/,
-          include: [path.join(__dirname, "src")],
-          loader:
-            "style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]"
+          include: [path.join(__dirname, "..", "src")],
+           loader: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: "css-loader"
+          })
         },
         {
           test: /\.scss$/,
@@ -171,26 +171,35 @@ module.exports = function(env) {
       extensions: [".js", ".jsx"]
     },
     plugins: [
-      new ExtractTextPlugin("main.css"),
+      new ExtractTextPlugin("[name].css"),
       new webpack.optimize.CommonsChunkPlugin({
         name: "vendor",
-        filename: "vendor.[hash].bundle.js",
+        filename: "vendor.bundle.js",
         chunks: ["vendor"]
       }),
       new htmlWebpackPlugin({
-        template: "index.html",
-        hash: true,
+        template: path.resolve(__dirname, "..", "index.html"),
+        hash: false,
         chunks: ["vendor", "main"]
       }),
-      new cleanWebpackPlugin(["build-dev"], {
+       new cleanWebpackPlugin(["build-dev"], {
         root: path.resolve(__dirname),
         verbose: true
-      })
+      }),
+      new webpack.DefinePlugin({
+        "process.env.NODE_ENV": JSON.stringify(env)
+      }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery'
+      }),
+      new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
       historyApiFallback: true,
-      contentBase: "./",
-      hot: true
+      contentBase: path.resolve(__dirname),
+      hot: true,
+      inline: true
     },
     devtool: "eval-source-map"
   }

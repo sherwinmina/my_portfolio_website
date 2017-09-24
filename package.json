@@ -11,7 +11,7 @@
     "webpack:build-development": "webpack --env=development",
     "webpack:serve-development": "webpack-dev-server --env=development",
     "webpack:build-production": "webpack --env=production",
-    "webpack:serve-production": "webpack-dev-server --progress --inline --hot --env=production",
+    "webpack:serve-production": "webpack-dev-server --env=production",
     "serve-local:production": "cd build-prod; http-server -p 8000 -o",
     "serve-local:development": "cd build-dev; http-server -p 7000 -o",
     "surge-deploy:production": "yarn run webpack:build-production; surge -p build-prod -d sherwinmina-dev.surge.sh",

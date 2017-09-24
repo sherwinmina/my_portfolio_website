@@ -11,17 +11,13 @@ import {
 
 class Frontend extends Component {
   render() {
-    return (
-      <div>
+    return <div>
         <Card.Group>
           <Container id="box">
             <Grid celled="internally" stackable className="box" columns={7}>
               <Grid.Row className="box">
                 <Grid.Column className="left" width={7}>
-                  <Image
-                    size="large"
-                    src="https://drive.google.com/uc?id=0By7dMnbpFyGxdTNrMFZuZGZuaXc"
-                  />
+                  <Image size="large" src={require("../../../public/projects/todo.jpg")} />
                 </Grid.Column>
                 <Grid.Column className="right" width={9}>
                   <div className="content">
@@ -32,7 +28,8 @@ class Frontend extends Component {
 
                     <h5>Front-end clone of the Imperfect Produce Site</h5>
                     <p>
-                      A practice front-end copy of the current design and flow the Imperfect Produce application
+                      A practice front-end copy of the current design and
+                      flow the Imperfect Produce application
                     </p>
 
                     <h4>Technologies used</h4>
@@ -42,21 +39,16 @@ class Frontend extends Component {
                     <li> firebase </li>
                     <li> OAuth </li>
 
-                    <Button.Group style={{paddingTop: '12px'}}>
+                    <Button.Group style={{ paddingTop: "12px" }}>
                       <Button attached="left">
                         {" "}
-                        <a
-                          href="https://github.com/sherwinmina/ReactToDo"
-                          target="_blank"
-                        >
+                        <a href="https://github.com/sherwinmina/ReactToDo" target="_blank">
                           Source Code
                         </a>
                       </Button>
                       <Button attached="right">
-                       <a
-                          href="http://react-todo-app1.herokuapp.com/"
-                          target="_blank"
-                        >Demo
+                        <a href="http://react-todo-app1.herokuapp.com/" target="_blank">
+                          Demo
                         </a>
                       </Button>
                     </Button.Group>
@@ -64,11 +56,9 @@ class Frontend extends Component {
                 </Grid.Column>
               </Grid.Row>
             </Grid>
-             
           </Container>
         </Card.Group>
-      </div>
-    );
+      </div>;
   }
 }
 
