@@ -66,56 +66,66 @@ const Tools = () => <Container text><Grid celled='internally' columns='equal'>
   </Container>;
 
   const About = () =>{
-    return (
-    <div>
-    <Grid id="right" mobile={16} tablet={16} computer={16}>
-          
-            <Container>
-              <div id='headline'>Designer & Coder</div>
-            <Divider/>
-              </Container>
-
-            <Grid  id='profile' celled='internally' columns='equal'>
-              <Grid.Column >
-                  <Image size='medium' floated='right' avatar src={require('../../public/Profile.jpg')}></Image>
-              </Grid.Column>
-
-              <Grid.Column id='profile'>
-                  <Item >
-
-                    <Item.Content verticalAlign='middle'>
-                        <h5>Check out some of my work</h5>
-                  <Link to='Portfolio'><h5>Portfolio</h5></Link>
-                    <h5><Link to='Contact'>Or hit me up.</Link></h5>
-                  </Item.Content>
-                </Item>
-              </Grid.Column>
-              
-            </Grid>
-              
-            
-
-            <Container text id='about'>
-              <p >Hello, I'm Sherwin Mina. I'm a web developer base in San Francisco, CA. I enjoy working on the front-end and UI development, but could also get my hands dirty working on the backend. My favorite go to stack are React, Redux, SCSS and Node.</p>
-              <p>I'm constantly learning new technolgies and seeking new challenges</p>
-            </Container>               
-          
-    </Grid>
-
-      <Grid >
-        <Grid id="left" mobile={16} tablet={16} computer={16}>
-            <Image centered src='/src/images/Profile.jpeg' />
-              
-            <Container id='tools'>
-            <h2 >Tools</h2>
-            <Divider></Divider>
-            <Tools/>
+    return <div>
+        <Grid id="right" mobile={16} tablet={16} computer={16}>
+          <Container>
+            <div id="headline">Designer & Coder</div>
+            <Divider />
           </Container>
 
+          <Grid id="profile" celled="internally" columns="equal">
+            <Grid.Column>
+              <Image size="medium" floated="right" avatar src={require('../../public/Profile.jpg')} />
+            </Grid.Column>
+
+            <Grid.Column id="profile">
+              <Item>
+                <Item.Content verticalAlign="middle">
+                  <h5>Check out some of my work</h5>
+                  <Link to="Portfolio">
+                    <h5>Portfolio</h5>
+                  </Link>
+                  <h5>
+                    <Link to="Contact">Or hit me up.</Link>
+                  </h5>
+                </Item.Content>
+              </Item>
+            </Grid.Column>
+          </Grid>
+
+          <Container text id="about">
+            <p style={{ textIndent: '20px' }}>
+              Hello, I'm Sherwin Mina. I'm a web developer base in San
+              Francisco, CA. Currently working with React, Redux, Webpack
+              and Node. My interests are in front-end development but I also
+              like being involve in the entirety of a project.
+            </p>
+            <p style={{ textIndent: '20px' }}>
+              I have a keen interest in graphic design, and I'm passionate
+              about crafting great experiences for end-users. These
+              influence all of my decisions as I work on a project, be they
+              technical or aesthetic, and I'm always on the lookout for new
+              ideas that can help better shape projects.
+            </p>
+            <p>
+              Constantly learning, seeking new challenges and still in
+              search for the best cheeseburger.
+            </p>
+          </Container>
         </Grid>
-      </Grid>
-    </div>
-  );
+
+        <Grid>
+          <Grid id="left" mobile={16} tablet={16} computer={16}>
+            <Image centered src="/src/images/Profile.jpeg" />
+
+            <Container id="tools">
+              <h2>Tools</h2>
+              <Divider />
+              <Tools />
+            </Container>
+          </Grid>
+        </Grid>
+      </div>
 
 }
 

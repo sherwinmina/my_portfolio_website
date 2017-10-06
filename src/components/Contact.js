@@ -7,7 +7,7 @@ class Contact extends Component {
   render () {
     return (
       <Container text  textAlign='center'>
-        <h2>Say Hello</h2>
+        <h1>Say Hello</h1>
         <Divider></Divider>
         <Image fluid src='https://s-media-cache-ak0.pinimg.com/originals/80/2c/c7/802cc778a9c4550bc6ab90654d2e007b.jpg' />
         

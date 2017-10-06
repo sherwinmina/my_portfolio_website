@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   Grid,
   Container,
@@ -7,10 +7,10 @@ import {
   Divider,
   Card,
   Image
-} from "semantic-ui-react";
+} from 'semantic-ui-react'
 
 class Miscellaneous extends Component {
-  render () {
+  render() {
     return (
       <div>
         <Card.Group>
@@ -32,7 +32,9 @@ class Miscellaneous extends Component {
 
                     <h5>Recreated the game Cards-Against-Humanity</h5>
                     <p>
-                      Utilizing Socket.io to host multiplayer game of Cards-Against-Humanity.
+                      Socket.io is a great tool to build browser multiplayer
+                      games. Initially implemented flux architecture with RX.js
+                      observables. Used gulp ease the development flow.
                     </p>
 
                     <h4>Technologies used</h4>
@@ -44,9 +46,9 @@ class Miscellaneous extends Component {
                     <li>Gulp</li>
                     <li>Webpack</li>
 
-                    <Button.Group style={{paddingTop: '12px'}}>
+                    <Button.Group style={{ paddingTop: '12px' }}>
                       <Button attached="left">
-                        {" "}
+                        {' '}
                         <a
                           href="https://github.com/sherwinmina/cards-against-humanity"
                           target="_blank"
@@ -55,13 +57,11 @@ class Miscellaneous extends Component {
                         </a>
                       </Button>
                       <Button attached="right">Demo</Button>;
-
                     </Button.Group>
                   </div>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
-
           </Container>
         </Card.Group>
       </div>

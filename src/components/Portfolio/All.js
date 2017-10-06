@@ -8,15 +8,13 @@ import Mobile from "./Mobile";
 import Miscellaneous from "./Miscellaneous";
 
 const All = () => {
-    return (
-      <div>
-       <Frontend/>
-       <FullStack/>
-       <Node/>
-       <Mobile/>
-       <Miscellaneous/>
-      </div>
-    )  
+    return <div>
+        <FullStack />
+        <Frontend />
+        <Node />
+        <Mobile />
+        <Miscellaneous />
+      </div>  
 }
 
 export default All
