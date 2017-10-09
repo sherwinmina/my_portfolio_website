@@ -52,13 +52,16 @@
     "materialize-css": "^0.100.2",
     "proptypes": "^1.1.0",
     "react": "^15.6.1",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^15.6.1",
     "react-materialize": "^1.0.14",
+    "react-particles-js": "^2.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-transition": "^1.0.1",
     "react-transition-group": "^1.2.0",
     "react-transitions": "^1.0.0",
+    "react-typist": "^1.1.1",
     "semantic-ui-css": "^2.2.11",
     "semantic-ui-react": "^0.71.1"
   }

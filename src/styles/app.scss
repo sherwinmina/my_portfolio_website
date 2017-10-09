@@ -1,46 +1,49 @@
 @import './vendor.scss';
+@import url('https://fonts.googleapis.com/css?family=Questrial');
 
-html, body{
-  
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: Helvetica;
 }
 
-p{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+p {
+  font-family: 'Questrial', sans-serif;
+  font-size: 14px;
 }
 
-::-webkit-scrollbar
-{
-  width: 10px;  /* for vertical scrollbars */
+h1 {
+  font-family: 'Questrial', sans-serif;
+  font-size: 24px;
+  color: grey;
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* for vertical scrollbars */
   height: 1px; /* for horizontal scrollbars */
 }
 
-::-webkit-scrollbar-track
-{
+::-webkit-scrollbar-track {
   background: rgb(184, 131, 57);
 }
 
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
   background: #132435;
-  border: 2px solid #DD9C47;
+  border: 2px solid #dd9c47;
   height: 10px;
 }
 
-.MainContainer{
-  position: absolute; 
+.MainContainer {
+  position: absolute;
   display: flex;
-  background: #BBB7B3;
-  height: 100%; 
-  width: 100%;  
+  background: #bbb7b3;
+  height: 100%;
+  width: 100%;
 }
 
-.right-container{
-  width:100%;
+.right-container {
+  width: 100%;
   margin: 0;
   padding: 0;
   overflow: scroll;

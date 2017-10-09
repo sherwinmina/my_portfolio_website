@@ -9,27 +9,38 @@ import {
   Image
 } from 'semantic-ui-react'
 import WorkCard from '../common/WorkCard'
+import ReactCSSTransition from 'react-addons-css-transition-group'
+import '../../styles/All.scss'
 
 const Frontend = () => {
   return (
     <div>
-      <Card.Group>
-        <Container id="box">
-          <ImperfectProduce />
-        </Container>
+      <ReactCSSTransition
+        component="div"
+        transitionName="card"
+        transitionEnterTimeout={600}
+        transitionEnterTimeout={600}
+        transitionLeave={400}
+        transitionAppear={true}
+      >
+        <Card.Group>
+          <Container id="box">
+            <ImperfectProduce />
+          </Container>
 
-        <Container id="box">
-          <Sortable />
-        </Container>
+          <Container id="box">
+            <Sortable />
+          </Container>
 
-        <Container id="box">
-          <Calculator />
-        </Container>
+          <Container id="box">
+            <Calculator />
+          </Container>
 
-        <Container id="box">
-          <Weather />
-        </Container>
-      </Card.Group>
+          <Container id="box">
+            <Weather />
+          </Container>
+        </Card.Group>
+      </ReactCSSTransition>
     </div>
   )
 }

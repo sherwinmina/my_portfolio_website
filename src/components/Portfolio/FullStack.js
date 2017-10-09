@@ -9,64 +9,76 @@ import {
   Image
 } from 'semantic-ui-react'
 
+import ReactCSSTransition from 'react-addons-css-transition-group'
+import '../../styles/All.scss'
+
 class Frontend extends Component {
   render() {
     return (
       <div>
-        <Beer />
-        <Nba />
-        <Card.Group>
-          <Container id="box">
-            <Grid celled="internally" stackable className="box" columns={7}>
-              <Grid.Row className="box">
-                <Grid.Column className="left" width={7}>
-                  <Image
-                    size="large"
-                    src={require('../../../public/projects/todo.jpg')}
-                  />
-                </Grid.Column>
-                <Grid.Column className="right" width={9}>
-                  <div className="content">
-                    <div id="title">
-                      <h1>React To-Do</h1>
+        <ReactCSSTransition
+          component="div"
+          transitionName="card"
+          transitionEnterTimeout={600}
+          transitionEnterTimeout={600}
+          transitionLeave={400}
+          transitionAppear={true}
+        >
+          <Beer />
+          <Nba />
+          <Card.Group>
+            <Container id="box">
+              <Grid celled="internally" stackable className="box" columns={7}>
+                <Grid.Row className="box">
+                  <Grid.Column className="left" width={7}>
+                    <Image
+                      size="large"
+                      src={require('../../../public/projects/todo.jpg')}
+                    />
+                  </Grid.Column>
+                  <Grid.Column className="right" width={9}>
+                    <div className="content">
+                      <div id="title">
+                        <h1>React To-Do</h1>
+                      </div>
+                      <Divider />
+
+                      <h5>A To do app</h5>
+                      <p>A serverless implementation of a to do app</p>
+
+                      <h4>Technologies used</h4>
+                      <li> React </li>
+                      <li> Redux </li>
+                      <li> Webpack </li>
+                      <li> firebase </li>
+                      <li> OAuth </li>
+
+                      <Button.Group style={{ paddingTop: '12px' }}>
+                        <Button attached="left">
+                          {' '}
+                          <a
+                            href="https://github.com/sherwinmina/ReactToDo"
+                            target="_blank"
+                          >
+                            Source Code
+                          </a>
+                        </Button>
+                        <Button attached="right">
+                          <a
+                            href="http://react-todo-app1.herokuapp.com/"
+                            target="_blank"
+                          >
+                            Demo
+                          </a>
+                        </Button>
+                      </Button.Group>
                     </div>
-                    <Divider />
-
-                    <h5>A To do app</h5>
-                    <p>A serverless implementation of a to do app</p>
-
-                    <h4>Technologies used</h4>
-                    <li> React </li>
-                    <li> Redux </li>
-                    <li> Webpack </li>
-                    <li> firebase </li>
-                    <li> OAuth </li>
-
-                    <Button.Group style={{ paddingTop: '12px' }}>
-                      <Button attached="left">
-                        {' '}
-                        <a
-                          href="https://github.com/sherwinmina/ReactToDo"
-                          target="_blank"
-                        >
-                          Source Code
-                        </a>
-                      </Button>
-                      <Button attached="right">
-                        <a
-                          href="http://react-todo-app1.herokuapp.com/"
-                          target="_blank"
-                        >
-                          Demo
-                        </a>
-                      </Button>
-                    </Button.Group>
-                  </div>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-          </Container>
-        </Card.Group>
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
+            </Container>
+          </Card.Group>
+        </ReactCSSTransition>
       </div>
     )
   }
@@ -167,15 +179,15 @@ const Nba = () => (
             <Button.Group style={{ paddingTop: '12px' }}>
               <Button attached="left">
                 {' '}
-                <a href="http://nba-app.surge.sh/" target="_blank">
-                  Source Code
-                </a>
-              </Button>
-              <Button attached="right">
                 <a
                   href="https://github.com/sherwinmina/NBA-APP"
                   target="_blank"
                 >
+                  Source Code
+                </a>
+              </Button>
+              <Button attached="right">
+                <a href="http://nba-app.surge.sh/" target="_blank">
                   Demo
                 </a>
               </Button>
